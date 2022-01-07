@@ -1,0 +1,91 @@
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\App.xbf
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\MainPage.xbf
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.xr.xml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.exe
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.pdb
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\resources.pri
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\AppxManifest.xml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Core\Pizza Ordering UI.exe
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.build.appxrecipe
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\System.Runtime.dll
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.g.i.cs
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.g.cs
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.g.cs
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.xaml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.xaml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.xbf
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.xbf
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.csproj.CoreCompileInputs.cache
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.csproj.CopyComplete
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.exe
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.pdb
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\priconfig.xml
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\resources.resfiles
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\pri.resfiles
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\qualifiers.txt
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885058160000000.json
+C:\Users\vogia\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.csprojAssemblyReference.cache
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\App.xbf
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\MainPage.xbf
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.xr.xml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.exe
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.pdb
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\resources.pri
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\AppxManifest.xml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Core\Pizza Ordering UI.exe
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Pizza Ordering UI.build.appxrecipe
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\System.Runtime.dll
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.csproj.AssemblyReference.cache
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.g.i.cs
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.g.cs
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.g.cs
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.xaml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.xaml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\App.xbf
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MainPage.xbf
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.csproj.CoreCompileInputs.cache
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Or.AFEC3C50.Up2Date
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.exe
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\Pizza Ordering UI.pdb
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\priconfig.xml
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\resources.resfiles
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\pri.resfiles
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\qualifiers.txt
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885058160000000.json
+C:\Users\Hy\Desktop\Pizza Ordering UI\Pizza Ordering UI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424995200000000.json
