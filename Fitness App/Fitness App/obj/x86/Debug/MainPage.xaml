@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Fitness_App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fitness_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="508" Margin="75,75,0,0" VerticalAlignment="Top" Width="340"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="24"><Run Text="Fitness and Health Calculator"/><LineBreak/><Run/></TextBlock>
+        <ComboBox x:ConnectionId='2' x:Name="cboType" Margin="100,114,0,0" Width="290" PlaceholderText="Pick a calculation"                                            >
+            <x:String>Body Mass Index</x:String>
+            <x:String>Maximum Heart Rate</x:String>
+            <x:String>Basal Matabolic Rate</x:String>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="100,151,0,0" Text="Age (2 - 120):" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"/>
+        <TextBox x:ConnectionId='3' x:Name="txtAge" HorizontalAlignment="Left" Margin="100,170,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.656" Width="290"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,207,0,0" Text="Gender:" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <RadioButton x:ConnectionId='4' x:Name="radMale" Content="Male"                       Margin="185,202,0,0" VerticalAlignment="Top" Width="78"/>
+        <RadioButton x:ConnectionId='5' x:Name="radFemale" Content="Female"                         Margin="274,202,0,0" VerticalAlignment="Top" Width="78"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,240,0,0" Text="Weight (kg):" TextWrapping="Wrap" VerticalAlignment="Top" Width="77"/>
+        <TextBlock HorizontalAlignment="Left" Text="Height (cm):" TextWrapping="Wrap" VerticalAlignment="Top" Margin="100,296,0,0"/>
+        <TextBox x:ConnectionId='6' x:Name="txtWeight" HorizontalAlignment="Left" Margin="100,259,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.656" Width="290"/>
+        <TextBox x:ConnectionId='7' x:Name="txtHeight" HorizontalAlignment="Left" Margin="100,315,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.656" Width="290"/>
+        <Button x:ConnectionId='8' x:Name="btnClear" Content="Clear"                        Margin="100,360,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:ConnectionId='9' x:Name="btnCalculate" Content="Calculate"                            Margin="270,360,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="100,410,0,0" Text="Answer" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='10' x:Name="txtAnswer" HorizontalAlignment="Left" Margin="100,429,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-2.641,-1.656" Width="290" Height="130"/>
+
+    </Grid>
+</Page>
+
