@@ -1,0 +1,26 @@
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.exe
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.deps.json
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.runtimeconfig.json
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.runtimeconfig.dev.json
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.dll
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.pdb
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.csprojAssemblyReference.cache
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.AssemblyInfoInputs.cache
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.AssemblyInfo.cs
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.csproj.CoreCompileInputs.cache
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.dll
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.pdb
+C:\Users\vogia\Desktop\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.genruntimeconfig.cache
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.exe
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.deps.json
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.runtimeconfig.json
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.runtimeconfig.dev.json
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.dll
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\bin\Debug\netcoreapp3.1\Banner Printing App.pdb
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.csprojAssemblyReference.cache
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.AssemblyInfoInputs.cache
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.AssemblyInfo.cs
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.csproj.CoreCompileInputs.cache
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.dll
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.pdb
+C:\Users\vogia\Desktop\PROG1124\Lab 3 - Banner Printing App\Banner Printing App\Banner Printing App\obj\Debug\netcoreapp3.1\Banner Printing App.genruntimeconfig.cache
