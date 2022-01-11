@@ -1,0 +1,58 @@
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\Store Produces.csprojAssemblyReference.cache
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\App.g.i.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\App.g.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\MainPage.g.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\App.xaml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\MainPage.xaml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\App.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\MainPage.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\Store Produces.csproj.CoreCompileInputs.cache
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\App.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\MainPage.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Store Produces.xr.xml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Store Produces.exe
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Store Produces.pdb
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\resources.pri
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\AppxManifest.xml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Core\AppxManifest.xml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Core\Store Produces.exe
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Store Produces.build.appxrecipe
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Runtime.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\Store Produces.csproj.CopyComplete
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\Store Produces.exe
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\Store Produces.pdb
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ResourceHandlingTask.state
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\priconfig.xml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\priconfig.xml.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\resources.resfiles
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\resources.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\pri.resfiles
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\pri.resfiles.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\qualifiers.txt
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\qualifiers.txt.intermediate
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885058160000000.json
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ProductInfo.g.i.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ProductInfo.g.cs
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ProductInfo.xaml
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\ProductInfo.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\ProductInfo.xbf
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Memory.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Text.Json.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Text.Encodings.Web.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\FxResources.System.Memory.SR.resw
+C:\Users\vogia\OneDrive - NC\PROG1124\Lab 5 - Classes and Error Handling\Store Produces\Store Produces\obj\x86\Debug\FxResources.System.Text.Json.SR.resw
