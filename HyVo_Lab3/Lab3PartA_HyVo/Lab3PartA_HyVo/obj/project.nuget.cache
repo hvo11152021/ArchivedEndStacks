@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2dXE83w1/osQl7ZQ4y0xOVxIl3IEBD2CB5F1ecTYwpIDOhL1jiBrAovkp0jKvTQi4F5id5OIHD7eOZWdBW/vMQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vogia\\OneDrive - NC\\Spring 2021\\PROG1224 Object Oriented Soft Dev\\Lab 3\\Lab3PartA_HyVo\\Lab3PartA_HyVo\\Lab3PartA_HyVo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vogia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\vogia\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

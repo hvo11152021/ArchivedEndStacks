@@ -1,0 +1,18 @@
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.deps.json
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.dll
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.pdb
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.csproj.AssemblyReference.cache
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.AssemblyInfoInputs.cache
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.AssemblyInfo.cs
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.csproj.CoreCompileInputs.cache
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.dll
+C:\Users\vogia\Desktop\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.pdb
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.deps.json
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.dll
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\bin\Debug\netstandard2.0\Lab3PartA_HyVo.pdb
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.csproj.AssemblyReference.cache
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.AssemblyInfoInputs.cache
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.AssemblyInfo.cs
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.csproj.CoreCompileInputs.cache
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.dll
+C:\Users\vogia\OneDrive - NC\Spring 2021\PROG1224 Object Oriented Soft Dev\Lab 3\Lab3PartA_HyVo\Lab3PartA_HyVo\obj\Debug\netstandard2.0\Lab3PartA_HyVo.pdb
