@@ -1,0 +1,247 @@
+﻿@model IEnumerable<CanadaGames.Models.Placement>
+
+@{
+    ViewData["Title"] = "Athlete Placements";
+    CanadaGames.Models.Athlete athlete = (CanadaGames.Models.Athlete)ViewBag.Athlete;
+}
+
+<br />
+<div class="media">
+    <div>
+        @{
+            if (athlete.AthleteThumbnail?.Content != null)
+            {
+                string imageBase64 = Convert.ToBase64String(athlete.AthleteThumbnail.Content);
+                string imageSrc = string.Format("data:" + athlete.AthleteThumbnail.MimeType + ";base64,{0}", imageBase64);
+                <img src="@imageSrc" alt="Profile Picture of @athlete.FullName" title="Profile Picture of @athlete.FullName" style="max-height: 80px; max-width: 96px" class="img-fluid rounded" />
+            }
+            else
+            {
+                <img src="~/images/blankProfile.jpg" style="max-height: 80px; max-width: 96px" class="img-fluid rounded" />
+            }
+        }
+    </div>
+    <div class="media-body ml-3">
+        <h2><text class="d-none d-sm-inline">Athlete: </text>@athlete.FullName</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <dl class="row">
+                    <dt class="col-md-4">
+                        @Html.DisplayNameFor(model => athlete.ACode)
+                    </dt>
+                    <dd class="col-md-8">
+                        @Html.DisplayFor(model => athlete.ACode)
+                    </dd>
+                    <dt class="col-md-4">
+                        @Html.DisplayNameFor(model => athlete.LastName)
+                    </dt>
+                    <dd class="col-md-8">
+                        @Html.DisplayFor(model => athlete.LastName)
+                    </dd>
+                    <dt class="col-md-4">
+                        First/Middle
+                    </dt>
+                    <dd class="col-md-8">
+                        @Html.DisplayFor(model => athlete.FirstName) @Html.DisplayFor(model => athlete.MiddleName)
+                    </dd>
+                    <dt class="col-md-4">
+                        Age (@Html.DisplayNameFor(model => athlete.DOB))
+                    </dt>
+                    <dd class="col-md-8">
+                        @athlete.Age (@Html.DisplayFor(model => athlete.DOB))
+                    </dd>
+                    <dt class="col-md-4">
+                        @Html.DisplayNameFor(model => athlete.YearsInSport)
+                    </dt>
+                    <dd class="col-md-8">
+                        @Html.DisplayFor(model => athlete.YearsInSport)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-sm-6">
+                <dl class="row">
+                    <dt class="col-md-3">
+                        @Html.DisplayNameFor(model => athlete.Height)
+                    </dt>
+                    <dd class="col-md-9">
+                        @Html.DisplayFor(model => athlete.Height)
+                    </dd>
+                    <dt class="col-md-3">
+                        @Html.DisplayNameFor(model => athlete.Weight)
+                    </dt>
+                    <dd class="col-md-9">
+                        @Html.DisplayFor(model => athlete.Weight)
+                    </dd>
+                    <dt class="col-md-3">
+                        @Html.DisplayNameFor(model => athlete.Coach)
+                    </dt>
+                    <dd class="col-md-9">
+                        @Html.DisplayFor(model => athlete.Coach.FullName)
+                    </dd>
+                    <dt class="col-sm-3">
+                        @Html.DisplayNameFor(model => athlete.AthleteSports)
+                    </dt>
+                    <dd class="col-sm-9">
+                        @{
+                            int condCount = athlete.AthleteSports.Count;
+                            if (condCount > 0)
+                            {
+                                string firstCond = athlete.AthleteSports.FirstOrDefault().Sport.Name;
+                                if (condCount > 1)
+                                {
+                                    string condList = firstCond;
+                                    var c = athlete.AthleteSports.ToList();
+                                    for (int i = 1; i < condCount; i++)
+                                    {
+                                        condList += ", " + c[i].Sport.Name;
+                                    }
+                                    <a tabindex="0" class="" role="button" data-toggle="popover"
+                                       data-trigger="focus" title="Sports" data-placement="bottom" data-content="@condList">@firstCond...<span class="badge">@condCount</span></a>
+                                }
+                                else
+                                {
+                                    @firstCond
+                                }
+                            }
+                        }
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<form asp-action="Index" method="get">
+    <input type="hidden" name="sortDirection" value="@ViewData["sortDirection"]" />
+    <input type="hidden" name="sortField" value="@ViewData["sortField"]" />
+    <input type="hidden" name="AthleteID" value="@athlete.ID" />
+
+    <dl class="dl-horizontal">
+        <dt>
+            <button class="btn @(ViewData["Filtering"])" type="button" data-toggle="collapse" id="filterToggle" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+                Filter
+            </button>
+        </dt>
+        <dd>
+            <div class="form-horizontal">
+                <div class="collapse card card-body bg-light" style="padding-top: 10px; padding-bottom: 0px;" id="collapseFilter">
+                    <div class="form-row">
+                        <div class="form-group col-md-4 ml-md-3">
+                            <label class="control-label">Sport:</label>
+                            @Html.DropDownList("SportID", null, "All Sports", htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-4 ml-md-3">
+                            <label class="control-label">Event:</label>
+                            @Html.DropDownList("EventID", null, "All Events", htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="control-label">Search Notes:</label>
+                            @Html.TextBox("SearchString", null, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-3 align-self-end">
+                            <input type="submit" name="actionButton" value="Apply" class="btn btn-primary" />
+                            <a asp-action="Index" asp-route-AthleteID="@athlete.ID">Clear</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dd>
+        <dt>
+        </dt>
+        <dd>
+            <div>
+                <table class="table">
+                    <colgroup>
+                        <col span="1" />
+                        <col span="1" />
+                        <col span="1" />
+                        <col span="1" />
+                        <col span="1" width="400" />
+                        <col span="1" />
+                    </colgroup>
+                    <tr>
+                        <th>
+                            <input type="submit" name="actionButton" value="Placement" class="btn btn-link" />
+                        </th>
+                        <th>
+                            <input type="submit" name="actionButton" value="Gender" class="btn btn-link" />
+                        </th>
+                        <th>
+                            <input type="submit" name="actionButton" value="Sport" class="btn btn-link" />
+                        </th>
+                        <th>
+                            <input type="submit" name="actionButton" value="Event" class="btn btn-link" />
+                        </th>
+                        <th>
+                            <input type="submit" disabled="disabled" value="Comments" class="btn btn-link" />
+                        </th>
+                        <th>
+                            <a asp-controller="AthletePlacements" asp-action="Create" asp-route-AthleteID="@athlete.ID" asp-route-AthleteName="@athlete.FullName">
+                                <span class="btn btn-success"><strong>&#x271A; Create</strong></span>
+                            </a>
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Place)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Event.Gender.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Event.Sport.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Event.Name)
+                    </td>
+                    <td>
+                        @{
+                            string[] noteWords = item.Comments.Split(' ');
+                            if (noteWords.Count() > 5)
+                            {
+                                <a class="" role="button" data-toggle="collapse" href="#collapseSum@(item.ID)" aria-expanded="false" aria-controls="collapseSum@(item.ID)">
+                                    @(string.Join(" ", noteWords.Take(5)) + "...")
+                                </a>
+                                <div class="collapse" id="collapseSum@(item.ID)">
+                                    <div class="well">
+                                        @(string.Join(" ", noteWords.Skip(5)))
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                @item.Comments
+                            }
+                        }
+                        @*For help with Bootstrap Collapse see: https://getbootstrap.com/docs/3.3/javascript/#collapse*@
+                    </td>
+                    <td>
+                        <a asp-controller="AthletePlacements" asp-action="Edit" asp-route-id="@item.ID">
+                            <span class="btn btn-sm btn-outline-primary">&#x270D;</span>
+                        </a>
+                        <a asp-controller="AthletePlacements" asp-action="Delete" asp-route-id="@item.ID">
+                            <span class="btn btn-sm btn-outline-danger">&#x274C</span>
+                        </a>
+                    </td>
+                </tr>
+                    }
+                </table>
+            </div>
+        </dd>
+    </dl>
+    <partial name="_PagingNavBar" />
+</form>
+<div>
+    <a asp-action="Edit" asp-controller="Athletes" asp-route-id="@athlete.ID">Edit</a> |
+    <a href='@ViewData["returnURL"]'>Back to Athlete List</a>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+}
