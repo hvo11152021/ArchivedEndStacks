@@ -11,10 +11,6 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="row">
         <div class="col-md-4">
-            <div class="form-group custom-file mt-3 mb-4">
-                <label class="control-label custom-file-label">Picture File:</label>
-                <input type="file" class="custom-file-input" name="thePicture" /><br />
-            </div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
                 <input asp-for="FirstName" class="form-control" />
@@ -60,6 +56,14 @@
                 <input asp-for="Affiliation" class="form-control" />
                 <span asp-validation-for="Affiliation" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label class="control-label">Upload Documents:</label>
+                <input type="file" class="" name="theFiles" multiple="multiple" />
+            </div>
+            <div class="form-group custom-file mt-3 mb-4">
+                <label class="control-label custom-file-label">Picture File:</label>
+                <input type="file" class="custom-file-input" name="thePicture" /><br />
+            </div>
         </div>
         <div class="col-md-8">
             <div class="form-group">
@@ -76,8 +80,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="HometownID" class="control-label"></label>
-                <select asp-for="HometownID" class="form-control" asp-items="ViewBag.HometownID"></select>
-                <span asp-validation-for="HometownID" class="text-danger"></span>
+                <select asp-for="HometownID" class="form-control" asp-items="ViewBag.HometownID">
+                    <option value="">Select Contingent First</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="GenderID" class="control-label"></label>
@@ -131,16 +136,12 @@
                     <textarea asp-for="MediaInfo" class="form-control" rows="5"></textarea>
                     <span asp-validation-for="MediaInfo" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Upload Documents:</label>
-                    <input type="file" class="" name="theFiles" multiple="multiple" />
-                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Next" class="btn btn-primary" />
                 </div>
             </div>
         </div>
@@ -154,10 +155,15 @@
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
         <script src="~/js/refreshDDL.js"></script>
         <script type="text/javascript">
-        $('#ContingentID').change(function () {
-            var selectedContingent = $("#ContingentID").val();
-            var URL = "/Athletes/GetHometowns/" + selectedContingent;
-            refreshDDL('HometownID', URL, true);
-        });
+            $('#ContingentID').change(function () {
+                var selectedContingent = $("#ContingentID").val();
+                var URL = "/Athletes/GetHometowns/" + selectedContingent;
+                refreshDDL('HometownID', URL, true,' Select Contingent First',true,'Select a Hometown');
+            });
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
         </script>
     }

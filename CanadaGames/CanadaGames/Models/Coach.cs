@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CanadaGames.Models
 {
-    public class Coach
+    public class Coach : Auditable
     {
         public Coach()
         {

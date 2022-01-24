@@ -12,6 +12,16 @@ namespace CanadaGames.Models
         {
             Placements = new HashSet<Placement>();
         }
+
+        [Display(Name = "Event")]
+        public string Summary
+        {
+            get
+            {
+                return Gender?.Name + "'s " + Type + " " + Name;
+            }
+        }
+
         public int ID { get; set; }
 
         [Required(ErrorMessage = "You cannot leave the name blank.")]

@@ -6,9 +6,24 @@ using System.Threading.Tasks;
 
 namespace CanadaGames.Models
 {
-    public class Placement
+    public class Placement : Auditable
     {
         public int ID { get; set; }
+
+        [Display(Name = "Place")]
+        public string PlacementOrdinal
+        {
+            get
+            {
+                return Place switch
+                {
+                    1 => Place.ToString() + "st",
+                    2 => Place.ToString() + "nd",
+                    3 => Place.ToString() + "rd",
+                    _ => Place.ToString() + "th",
+                };
+            }
+        }
 
         [Required(ErrorMessage = "You cannot leave the placement blank.")]
         [Range(1, 100, ErrorMessage = "Place must be bwtween 1 and 100.")]

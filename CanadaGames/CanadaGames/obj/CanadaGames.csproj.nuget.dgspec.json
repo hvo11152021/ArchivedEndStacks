@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vogia\\Desktop\\HyVo_CanadaGames_Part3\\CanadaGames\\CanadaGames.csproj": {}
+    "C:\\Hy_term3_mvc_projects\\CanadaGames_Part4\\CanadaGames\\CanadaGames.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vogia\\Desktop\\HyVo_CanadaGames_Part3\\CanadaGames\\CanadaGames.csproj": {
+    "C:\\Hy_term3_mvc_projects\\CanadaGames_Part4\\CanadaGames\\CanadaGames.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vogia\\Desktop\\HyVo_CanadaGames_Part3\\CanadaGames\\CanadaGames.csproj",
+        "projectUniqueName": "C:\\Hy_term3_mvc_projects\\CanadaGames_Part4\\CanadaGames\\CanadaGames.csproj",
         "projectName": "CanadaGames",
-        "projectPath": "C:\\Users\\vogia\\Desktop\\HyVo_CanadaGames_Part3\\CanadaGames\\CanadaGames.csproj",
+        "projectPath": "C:\\Hy_term3_mvc_projects\\CanadaGames_Part4\\CanadaGames\\CanadaGames.csproj",
         "packagesPath": "C:\\Users\\vogia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vogia\\Desktop\\HyVo_CanadaGames_Part3\\CanadaGames\\obj\\",
+        "outputPath": "C:\\Hy_term3_mvc_projects\\CanadaGames_Part4\\CanadaGames\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,17 +44,25 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[4.5.3.3, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.19, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.19, )"
+              "version": "[3.1.21, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.19, )"
+              "version": "[3.1.21, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

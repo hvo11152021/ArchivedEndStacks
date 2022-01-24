@@ -25,6 +25,8 @@ namespace CanadaGames
                 try
                 {
                     var context = services.GetRequiredService<CanadaGamesContext>();
+                    var identityContext = services.GetRequiredService<ApplicationDbContext>();
+                    ApplicationSeedData.SeedAsync(identityContext, services).Wait();
                     context.Database.Migrate();
                     CGSeedData.Initialize(services);
                 }

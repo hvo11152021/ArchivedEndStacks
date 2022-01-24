@@ -25,7 +25,6 @@ namespace CanadaGames.Models
         public string Name { get; set; }
 
         public ICollection<Athlete> Athletes { get; set; }
-
         public ICollection<Hometown> Hometowns { get; set; }
     }
 }

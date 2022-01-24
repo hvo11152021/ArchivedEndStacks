@@ -34,10 +34,6 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <div class="form-group custom-file mt-3 mb-4">
-                <label class="control-label custom-file-label">Picture File:</label>
-                <input type="file" class="custom-file-input" name="thePicture" /><br />
-            </div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
                 <input asp-for="FirstName" class="form-control" />
@@ -83,6 +79,44 @@
                 <input asp-for="Affiliation" class="form-control" />
                 <span asp-validation-for="Affiliation" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label class="control-label"> Current Documents:</label>
+                <div class="ml-md-3">
+                    @{
+                        int fileCount = Model.AthleteDocuments.Count;
+                        if (fileCount > 0)
+                        {
+                            var firstFile = Model.AthleteDocuments.FirstOrDefault(); ;
+                            if (fileCount > 1)
+                            {
+                                <a class="" role="button" data-toggle="collapse" href="#collapseSum@(Model.ID)" aria-expanded="false" aria-controls="collapseSum@(Model.ID)">
+                                    <span class="badge badge-info">@fileCount</span> Current Documents...
+                                </a>
+                                <div class="collapse" id="collapseSum@(Model.ID)">
+                                    @{
+                                        foreach (var d in Model.AthleteDocuments)
+                                        {
+                                            <a asp-action="Download" asp-route-id="@d.ID">@d.FileName</a> <br />
+                                        }
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <a asp-action="Download" asp-route-id="@firstFile.ID">@firstFile.FileName</a>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Upload Additional Documents:</label>
+                <input type="file" class="" name="theFiles" multiple="multiple" />
+            </div>
+            <div class="form-group custom-file mt-3 mb-4">
+                <label class="control-label custom-file-label">Picture File:</label>
+                <input type="file" class="custom-file-input" name="thePicture" /><br />
+            </div>
         </div>
         <div class="col-md-8">
             <div class="form-group">
@@ -92,15 +126,14 @@
             </div>
             <div class="form-group">
                 <label asp-for="ContingentID" class="control-label"></label>
-                <select asp-for="ContingentID" class="form-control" asp-items="ViewBag.ContingentID">
-                    <option value="0">Select the Contingent</option>
-                </select>
+                <select asp-for="ContingentID" class="form-control" asp-items="ViewBag.ContingentID"></select>
                 <span asp-validation-for="ContingentID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="HometownID" class="control-label"></label>
-                <select asp-for="HometownID" class="form-control" asp-items="ViewBag.HometownID"></select>
-                <span asp-validation-for="HometownID" class="text-danger"></span>
+                <select asp-for="HometownID" class="form-control" asp-items="ViewBag.HometownID">
+                    <option value="">No Hometown Selected</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="GenderID" class="control-label"></label>
@@ -149,10 +182,6 @@
                     <textarea asp-for="MediaInfo" class="form-control" rows="5"></textarea>
                     <span asp-validation-for="MediaInfo" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Upload Additional Documents:</label>
-                    <input type="file" class="" name="theFiles" multiple="multiple" />
-                </div>
             </div>
         </div>
         <div class="row">
@@ -172,10 +201,15 @@
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
         <script src="~/js/refreshDDL.js"></script>
         <script type="text/javascript">
-        $('#ContingentID').change(function () {
-            var selectedContingent = $("#ContingentID").val();
-            var URL = "/Athletes/GetHometowns/" + selectedContingent;
-            refreshDDL('HometownID', URL, true);
-        });
+            $('#ContingentID').change(function () {
+                var selectedContingent = $("#ContingentID").val();
+                var URL = "/Athletes/GetHometowns/" + selectedContingent;
+                refreshDDL('HometownID', URL, true,'No Hometown Selected',true,'Select a Hometown');
+            });
+            // Add the following code if you want the name of the file appear on select
+            $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
         </script>
     }

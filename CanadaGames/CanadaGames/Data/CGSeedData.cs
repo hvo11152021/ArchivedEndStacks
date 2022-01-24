@@ -48,7 +48,6 @@ namespace CanadaGames.Data
                     context.Genders.AddRange(genders);
                     context.SaveChanges();
                 }
-
                 //Add the Sports
                 if (!context.Sports.Any())
                 {
@@ -70,17 +69,16 @@ namespace CanadaGames.Data
                     }
                     context.SaveChanges();
                 }
-
                 //Add the Coaches
                 if (!context.Coaches.Any())
                 {
-                    string[] coachFirstNames = new string[] { "Woodstock", "Violet", "Charlie", "Lucy", "Linus", "Franklin", "Marcie", "Schroeder" };
-                    string[] coachLastNames = new string[] { "Hightower", "Broomspun", "Jones", "Bloggs", "Brown", "Smith", "Daniel" };
+                    string[] cfirstNames = new string[] { "Woodstock", "Violet", "Charlie", "Lucy", "Linus", "Franklin", "Marcie", "Schroeder" };
+                    string[] clastNames = new string[] { "Hightower", "Broomspun", "Jones", "Bloggs", "Brown", "Smith", "Daniel" };
 
                     //Loop through names and Coaches
-                    foreach (string lastName in coachLastNames)
+                    foreach (string lastName in clastNames)
                     {
-                        foreach (string firstname in coachFirstNames)
+                        foreach (string firstname in cfirstNames)
                         {
                             //Construct some details
                             Coach a = new Coach()
@@ -110,44 +108,32 @@ namespace CanadaGames.Data
 
                 //Create 5 large strings from Bacon ipsum
                 string[] baconNotes = new string[] { "Bacon ipsum dolor amet meatball corned beef kevin, alcatra kielbasa biltong drumstick strip steak spare ribs swine. Pastrami shank swine leberkas bresaola, prosciutto frankfurter porchetta ham hock short ribs short loin andouille alcatra. Andouille shank meatball pig venison shankle ground round sausage kielbasa. Chicken pig meatloaf fatback leberkas venison tri-tip burgdoggen tail chuck sausage kevin shank biltong brisket.", "Sirloin shank t-bone capicola strip steak salami, hamburger kielbasa burgdoggen jerky swine andouille rump picanha. Sirloin porchetta ribeye fatback, meatball leberkas swine pancetta beef shoulder pastrami capicola salami chicken. Bacon cow corned beef pastrami venison biltong frankfurter short ribs chicken beef. Burgdoggen shank pig, ground round brisket tail beef ribs turkey spare ribs tenderloin shankle ham rump. Doner alcatra pork chop leberkas spare ribs hamburger t-bone. Boudin filet mignon bacon andouille, shankle pork t-bone landjaeger. Rump pork loin bresaola prosciutto pancetta venison, cow flank sirloin sausage.", "Porchetta pork belly swine filet mignon jowl turducken salami boudin pastrami jerky spare ribs short ribs sausage andouille. Turducken flank ribeye boudin corned beef burgdoggen. Prosciutto pancetta sirloin rump shankle ball tip filet mignon corned beef frankfurter biltong drumstick chicken swine bacon shank. Buffalo kevin andouille porchetta short ribs cow, ham hock pork belly drumstick pastrami capicola picanha venison.", "Picanha andouille salami, porchetta beef ribs t-bone drumstick. Frankfurter tail landjaeger, shank kevin pig drumstick beef bresaola cow. Corned beef pork belly tri-tip, ham drumstick hamburger swine spare ribs short loin cupim flank tongue beef filet mignon cow. Ham hock chicken turducken doner brisket. Strip steak cow beef, kielbasa leberkas swine tongue bacon burgdoggen beef ribs pork chop tenderloin.", "Kielbasa porchetta shoulder boudin, pork strip steak brisket prosciutto t-bone tail. Doner pork loin pork ribeye, drumstick brisket biltong boudin burgdoggen t-bone frankfurter. Flank burgdoggen doner, boudin porchetta andouille landjaeger ham hock capicola pork chop bacon. Landjaeger turducken ribeye leberkas pork loin corned beef. Corned beef turducken landjaeger pig bresaola t-bone bacon andouille meatball beef ribs doner. T-bone fatback cupim chuck beef ribs shank tail strip steak bacon." };
+                //Names for Athletes and Hometowns
+                //WARNING - If you change the lastnames used you could break the code for seeding Hometowns
+                //  That code assumes you have at least at least 26 unique names in the lastNames array
                 string[] firstNames = new string[] { "Lyric", "Antoinette", "Kendal", "Vivian", "Ruth", "Jamison", "Emilia", "Natalee", "Yadiel", "Jakayla", "Lukas", "Moses", "Kyler", "Karla", "Chanel", "Tyler", "Camilla", "Quintin", "Braden", "Clarence" };
                 string[] lastNames = new string[] { "Watts", "Randall", "Arias", "Weber", "Stone", "Carlson", "Robles", "Frederick", "Parker", "Morris", "Soto", "Bruce", "Orozco", "Boyer", "Burns", "Cobb", "Blankenship", "Houston", "Estes", "Atkins", "Miranda", "Zuniga", "Ward", "Mayo", "Costa", "Reeves", "Anthony", "Cook", "Krueger", "Crane", "Watts", "Little", "Henderson", "Bishop" };
                 int firstNameCount = firstNames.Count();
                 int lastNameCount = lastNames.Count();
 
+                //Create the Hometowns
                 if (!context.Hometowns.Any())
                 {
                     int i = 0;
                     foreach (int c in contingentIDs)
                     {
+                        //Warning - we assume you have at least at least 26 unique names in the lastNames array
                         var hometowns = new List<Hometown>
-                            {
-                                new Hometown { Name = lastNames[i], ContingentID = c },
-                                new Hometown { Name = lastNames[i+1], ContingentID = c },
-                            };
+                        {
+                            new Hometown { Name=lastNames[i], ContingentID=c},
+                            new Hometown { Name=lastNames[i+1], ContingentID=c},
+                        };
                         context.Hometowns.AddRange(hometowns);
                         context.SaveChanges();
                         i += 2;
                     }
-                    /*var hometowns = new List<Hometown>
-                    {
-                        new Hometown { Name = "Toronto", ID=context.Contingents.FirstOrDefault(d => d.Name == "Ontario").ID, },
-                        new Hometown { Name = "Halifax", ID=context.Contingents.FirstOrDefault(d => d.Name == "Nova Scotia").ID, },
-                        new Hometown { Name = "Calgary", ID=context.Contingents.FirstOrDefault(d => d.Name == "Alberta").ID, },
-                        new Hometown { Name = "Winnipeg", ID=context.Contingents.FirstOrDefault(d => d.Name == "Manitoba").ID, },
-                        new Hometown { Name = "Stratford", ID=context.Contingents.FirstOrDefault(d => d.Name == "Ontario").ID, },
-                        new Hometown { Name = "St. Catharines", ID=context.Contingents.FirstOrDefault(d => d.Name == "Ontario").ID, },
-                        new Hometown { Name = "Stratford", ID=context.Contingents.FirstOrDefault(d => d.Name == "Prince Edward Island").ID, },
-                        new Hometown { Name = "Ancaster", ID=context.Contingents.FirstOrDefault(d => d.Name == "Ontario").ID, },
-                        new Hometown { Name = "Vancouver", ID=context.Contingents.FirstOrDefault(d => d.Name == "British Columbia").ID, },
-                        new Hometown { Name = "Laval", ID=context.Contingents.FirstOrDefault(d => d.Name == "Quebec").ID, },
-                        new Hometown { Name = "Langley", ID=context.Contingents.FirstOrDefault(d => d.Name == "British Columbia").ID, },
-                        new Hometown { Name = "London", ID=context.Contingents.FirstOrDefault(d => d.Name == "Ontario").ID, }
-                    };
-                    context.Hometowns.AddRange(hometowns);
-                    context.SaveChanges();*/
                 }
-
+                //Create collection of the Hometown primary keys
                 int[] hometownIDs = context.Hometowns.Select(a => a.ID).ToArray();
                 int hometownIDCount = hometownIDs.Count();
 
@@ -177,10 +163,8 @@ namespace CanadaGames.Data
                                 LastName = lastName,
                                 MiddleName = lastName[1].ToString().ToUpper(),
                                 AthleteCode = random.Next(1111111, 9999999).ToString(),
-                                DOB = startDOB.AddDays(random.Next(60, 6500)),
-                                //Hometown = lastNames[random.Next(lastNameCount)],
-                                //Add new hometown for athletes
                                 HometownID = hometownIDs[random.Next(hometownIDCount)],
+                                DOB = startDOB.AddDays(random.Next(60, 6500)),
                                 Height = random.Next(170,200),
                                 Weight = random.Next(80, 100),
                                 YearsInSport = random.Next(12),
@@ -1669,7 +1653,6 @@ namespace CanadaGames.Data
                         }
                     }
                 }
-
             }
         }
     }

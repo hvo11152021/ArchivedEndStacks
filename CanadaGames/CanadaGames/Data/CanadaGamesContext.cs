@@ -1,4 +1,5 @@
 ﻿using CanadaGames.Models;
+using CanadaGames.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -40,13 +41,13 @@ namespace CanadaGames.Data
         public DbSet<Sport> Sports { get; set; }
         public DbSet<AthleteSport> AthleteSports { get; set; }
         public DbSet<Hometown> Hometowns { get; set; }
+        public DbSet<AthletePhoto> AthletePhotos { get; set; }
         public DbSet<AthleteDocument> AthleteDocuments { get; set; }
         public DbSet<UploadedFile> UploadedFiles { get; set; }
-        public DbSet<AthletePhoto> AthletePhotos { get; set; }
         public DbSet<AthleteThumbnail> AthleteThumbnails { get; set; }
-
         public DbSet<Event> Events { get; set; }
         public DbSet<Placement> Placements { get; set; }
+        public DbSet<PlacementReport> PlacementReports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -56,12 +57,34 @@ namespace CanadaGames.Data
             modelBuilder.Entity<AthleteSport>()
             .HasKey(p => new { p.AthleteID, p.SportID });
 
+            //Placement report
+            modelBuilder
+                .Entity<PlacementReport>()
+                .ToView(nameof(PlacementReports))
+                .HasKey(p => p.ID);
+
+            //Add a unique index to the combined foreign keys
+            modelBuilder.Entity<Placement>()
+            .HasIndex(p => new { p.AthleteID, p.EventID })
+            .IsUnique();
+
+            //Add a composite unique constraint key Hometown
+            modelBuilder.Entity<Hometown>()
+            .HasIndex(p => new { p.Name, p.ContingentID})
+            .IsUnique();
+
             //Prevent Cascade Deletes
             modelBuilder.Entity<Sport>()
                 .HasMany<Athlete>(d => d.Athletes)
                 .WithOne(p => p.Sport)
                 .HasForeignKey(p => p.SportID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Event>()
+            .HasMany<Placement>(d => d.Placements)
+            .WithOne(p => p.Event)
+            .HasForeignKey(p => p.EventID)
+            .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Gender>()
                 .HasMany<Athlete>(d => d.Athletes)
@@ -75,24 +98,17 @@ namespace CanadaGames.Data
                 .HasForeignKey(p => p.ContingentID)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Contingent>()
+                .HasMany<Hometown>(d => d.Hometowns)
+                .WithOne(p => p.Contingent)
+                .HasForeignKey(p => p.ContingentID)
+                .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Sport>()
                 .HasMany<AthleteSport>(d => d.AthleteSports)
                 .WithOne(p => p.Sport)
                 .HasForeignKey(p => p.SportID)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            //From contingent to hometown
-            modelBuilder.Entity<Contingent>()
-                .HasMany<Hometown>(h => h.Hometowns)
-                .WithOne(c => c.Contingent)
-                .HasForeignKey(c => c.ContingentID)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<Event>()
-            .HasMany<Placement>(d => d.Placements)
-            .WithOne(p => p.Event)
-            .HasForeignKey(p => p.EventID)
-            .OnDelete(DeleteBehavior.Restrict);
 
             //Note: Because CoachID is nullable in Athlete,
             //      Cascade Delete is already restricted
@@ -111,15 +127,6 @@ namespace CanadaGames.Data
             .IsUnique();
             modelBuilder.Entity<Sport>()
             .HasIndex(p => p.Code)
-            .IsUnique();
-
-            //For hometown
-            modelBuilder.Entity<Hometown>()
-                .HasIndex(h => new { h.Name, h.ContingentID })
-                .IsUnique();
-
-            modelBuilder.Entity<Placement>()
-            .HasIndex(p => new { p.AthleteID, p.EventID })
             .IsUnique();
         }
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

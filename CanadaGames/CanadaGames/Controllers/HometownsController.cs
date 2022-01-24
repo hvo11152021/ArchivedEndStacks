@@ -22,33 +22,14 @@ namespace CanadaGames.Controllers
         // GET: Hometowns
         public IActionResult Index()
         {
-            var hometown = _context.Hometowns.Include(h => h.Contingent);
-            return RedirectToAction("Index", "Lookups");
-        }
-
-        // GET: Hometowns/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hometown = await _context.Hometowns
-                .Include(h => h.Contingent)
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (hometown == null)
-            {
-                return NotFound();
-            }
-
-            return View(hometown);
+            return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
         }
 
         // GET: Hometowns/Create
         public IActionResult Create()
         {
-            ViewData["ContingentID"] = new SelectList(_context.Contingents, "ID", "Code");
+
+            PopulateDropDownLists();
             return View();
         }
 
@@ -65,7 +46,7 @@ namespace CanadaGames.Controllers
                 {
                     _context.Add(hometown);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { hometown.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
             }
             catch (DbUpdateException)
@@ -73,7 +54,7 @@ namespace CanadaGames.Controllers
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
 
-            ViewData["ContingentID"] = new SelectList(_context.Contingents, "ID", "Code", hometown.ContingentID);
+            PopulateDropDownLists(hometown);
             return View(hometown);
         }
 
@@ -90,7 +71,8 @@ namespace CanadaGames.Controllers
             {
                 return NotFound();
             }
-            ViewData["ContingentID"] = new SelectList(_context.Contingents, "ID", "Code", hometown.ContingentID);
+
+            PopulateDropDownLists(hometown);
             return View(hometown);
         }
 
@@ -101,19 +83,19 @@ namespace CanadaGames.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
         {
-            var hometownToUpdate = await _context.Hometowns.SingleOrDefaultAsync(h => h.ID == id);
-
+            var hometownToUpdate = await _context.Hometowns.FindAsync(id);
             if (hometownToUpdate == null)
             {
                 return NotFound();
             }
 
-            if (await TryUpdateModelAsync<Hometown>(hometownToUpdate, "", h => h.Name, h => h.ContingentID))
+            if (await TryUpdateModelAsync<Hometown>(hometownToUpdate, "",
+                d => d.ContingentID, d => d.Name))
             {
                 try
                 {
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { hometownToUpdate.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -126,13 +108,8 @@ namespace CanadaGames.Controllers
                         throw;
                     }
                 }
-                catch (DbUpdateException)
-                {
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
-                }
             }
-
-            ViewData["ContingentID"] = new SelectList(_context.Contingents, "ID", "Code", hometownToUpdate.ContingentID);
+            PopulateDropDownLists(hometownToUpdate);
             return View(hometownToUpdate);
         }
 
@@ -165,13 +142,37 @@ namespace CanadaGames.Controllers
             {
                 _context.Hometowns.Remove(hometown);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException dex)
             {
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                if (dex.GetBaseException().Message.Contains("FOREIGN KEY constraint failed"))
+                {
+                    ModelState.AddModelError("", "Unable to Delete Hometown. Remember, you cannot delete the Hometown of any Athlete in the system.");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                }
             }
             return View(hometown);
+            
+        }
+
+        private SelectList ContingentList(int? selectedId)
+        {
+            return new SelectList(_context
+                .Contingents
+                .OrderBy(m => m.Name), "ID", "Name", selectedId);
+        }
+        private void PopulateDropDownLists(Hometown hometown = null)
+        {
+            ViewData["ContingentID"] = ContingentList(hometown?.ContingentID);
+        }
+        //Add this...
+        private string ControllerName()
+        {
+            return this.ControllerContext.RouteData.Values["controller"].ToString();
         }
 
         private bool HometownExists(int id)

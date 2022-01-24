@@ -25,13 +25,13 @@ namespace CanadaGames.Models
         [StringLength(50, ErrorMessage = "Name cannot be more than 50 characters long.")]
         public string Name { get; set; }
 
+        public ICollection<Event> Events { get; set; }
+
         [Display(Name = "Main Athletes")]
         public ICollection<Athlete> Athletes { get; set; }
 
         [Display(Name="Alternates")]
         public ICollection<AthleteSport> AthleteSports { get; set; }
-
-        public ICollection<Event> Events { get; set; }
 
     }
 }

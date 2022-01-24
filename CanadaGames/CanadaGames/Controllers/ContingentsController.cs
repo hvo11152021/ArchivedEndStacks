@@ -22,25 +22,7 @@ namespace CanadaGames.Controllers
         // GET: Contingents
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Lookups");
-        }
-
-        // GET: Contingents/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var contingent = await _context.Contingents
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (contingent == null)
-            {
-                return NotFound();
-            }
-
-            return View(contingent);
+            return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
         }
 
         // GET: Contingents/Create
@@ -62,13 +44,14 @@ namespace CanadaGames.Controllers
                 {
                     _context.Add(contingent);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { contingent.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
             }
             catch (DbUpdateException)
             {
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
+
             return View(contingent);
         }
 
@@ -95,19 +78,19 @@ namespace CanadaGames.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
         {
-            var contingentToUpdate = await _context.Contingents.SingleOrDefaultAsync(c => c.ID == id);
-
+            var contingentToUpdate = await _context.Contingents.FindAsync(id);
             if (contingentToUpdate == null)
             {
                 return NotFound();
             }
 
-            if (await TryUpdateModelAsync<Contingent>(contingentToUpdate, "", c => c.Code, c => c.Name))
+            if (await TryUpdateModelAsync<Contingent>(contingentToUpdate, "",
+                d => d.Name, d=>d.Code))
             {
                 try
                 {
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { contingentToUpdate.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -119,10 +102,6 @@ namespace CanadaGames.Controllers
                     {
                         throw;
                     }
-                }
-                catch (DbUpdateException)
-                {
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
                 }
             }
             return View(contingentToUpdate);
@@ -156,13 +135,27 @@ namespace CanadaGames.Controllers
             {
                 _context.Contingents.Remove(contingent);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException dex)
             {
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                if (dex.GetBaseException().Message.Contains("FOREIGN KEY constraint failed"))
+                {
+                    ModelState.AddModelError("", "Unable to Delete Contingent. Remember, you cannot delete the Contingent of any Athlete in the system.");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                }
             }
             return View(contingent);
+            
+        }
+
+        //Add this...
+        private string ControllerName()
+        {
+            return this.ControllerContext.RouteData.Values["controller"].ToString();
         }
 
         private bool ContingentExists(int id)

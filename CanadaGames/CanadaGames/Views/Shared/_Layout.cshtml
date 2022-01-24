@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Canada Games 2022</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="manifest" href="~/manifest.json" />
 </head>
 <body>
     <header>
@@ -35,8 +36,10 @@
                                 <a class="dropdown-item" asp-area="" asp-controller="Coaches" asp-action="Index">Coaches</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" asp-area="" asp-controller="Sports" asp-action="Index">Sports</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="Lookups" asp-action="Index">Lookups</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Lookups" asp-action="Index">Maintain Lookup Values</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="AthleteDocuments" asp-action="Index">Athlete Documents</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="UserRoles" asp-action="Index">Security Roles</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Athletes" asp-action="PlacementReport">Athlete Place Reports</a>
                             </div>
                         </li>
                     </ul>

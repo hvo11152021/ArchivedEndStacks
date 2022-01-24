@@ -8,9 +8,14 @@ using Microsoft.EntityFrameworkCore;
 using CanadaGames.Data;
 using CanadaGames.Models;
 using CanadaGames.Utilities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using OfficeOpenXml;
+using System.IO;
 
 namespace CanadaGames.Controllers
 {
+    [Authorize]
     public class CoachesController : Controller
     {
         private readonly CanadaGamesContext _context;
@@ -95,7 +100,7 @@ namespace CanadaGames.Controllers
             ViewData["sortDirection"] = sortDirection;
 
             //Handle Paging
-            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID);
+            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID, ControllerName());
             ViewData["pageSizeID"] = PageSizeHelper.PageSizeList(pageSize);
 
             var pagedData = await PaginatedList<Coach>.CreateAsync(coaches.AsNoTracking(), page ?? 1, pageSize);
@@ -104,6 +109,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Coaches/Details/5
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public async Task<IActionResult> Details(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -127,6 +133,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Coaches/Create
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public IActionResult Create()
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -139,6 +146,7 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,FirstName,MiddleName,LastName")] Coach coach)
         {
@@ -163,6 +171,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Coaches/Edit/5
+        [Authorize(Roles = "Admin, Supervisor")]
         public async Task<IActionResult> Edit(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -185,6 +194,7 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
         {
@@ -230,6 +240,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Coaches/Delete/5
+        [Authorize(Roles = "Admin, Supervisor")]
         public async Task<IActionResult> Delete(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -253,6 +264,7 @@ namespace CanadaGames.Controllers
 
         // POST: Coaches/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -279,6 +291,36 @@ namespace CanadaGames.Controllers
             }
             return View(coach);
 
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> InsertFromExcel(IFormFile theExcel)
+        {
+            ExcelPackage excel;
+            using (var memoryStream = new MemoryStream())
+            {
+                await theExcel.CopyToAsync(memoryStream);
+                excel = new ExcelPackage(memoryStream);
+            }
+            var workSheet = excel.Workbook.Worksheets[0];
+            var start = workSheet.Dimension.Start;
+            var end = workSheet.Dimension.End;
+
+            List<Coach> coaches = new List<Coach>();
+
+            for (int row = start.Row; row <= end.Row; row++)
+            {
+                Coach c = new Coach
+                {
+                    FirstName = workSheet.Cells[row, 1].Text,
+                    MiddleName = workSheet.Cells[row, 2].Text,
+                    LastName = workSheet.Cells[row, 3].Text
+                };
+                coaches.Add(c);
+            }
+            _context.Coaches.AddRange(coaches);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Lookups", new { Tab = "CoachesTab" });
         }
 
         private string ControllerName()

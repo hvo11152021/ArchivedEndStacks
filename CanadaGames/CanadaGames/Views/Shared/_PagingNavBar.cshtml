@@ -1,6 +1,16 @@
 ﻿<partial name="_PageSizeModal" />
 @{
-    if (Model.TotalPages == 1)
+    if (Model.TotalPages == 0)
+    {
+        <ul class="pagination justify-content-center" style="margin:20px 0">
+            <li class="page-item">
+                <button type="button" title="Click to change page size." data-toggle="modal" data-target="#pageSizeModal" class="btn btn-primary">
+                    No Data to Show
+                </button>
+            </li>
+        </ul>
+    }
+    else if (Model.TotalPages == 1)
     {
         <ul class="pagination justify-content-center" style="margin:20px 0">
             <li class="page-item">

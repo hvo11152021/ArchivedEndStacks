@@ -4,40 +4,71 @@
 
 <h2>Lookup Values</h2>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <h4 id="Contingents">Contingents</h4>
-            @Html.DropDownList("ContingentsID", null, htmlAttributes: new { @size = 6, @class = "form-control" })
-            <div>
-                <a asp-controller="Contingents" asp-action="Create">Create</a> |
-                <a asp-controller="Contingents" asp-action="Edit" class="linkClick">Edit</a> |
-                <a asp-controller="Contingents" asp-action="Delete" class="linkClick">Delete</a>
-            </div>
+<div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTabs" role="tablist">
+        <li class="nav-item">
+            <a href="#DefaultPanel" aria-controls="DefaultTab" role="tab" class="nav-link active" name="DefaultTab" data-toggle="tab" aria-selected="false"> </a>
+        </li>
+        <li class="nav-item">
+            <a href="#ContingentsPanel" id="ContingentsTab" aria-controls="ContingentsTab" role="tab" class="nav-link" name="ContingentsPanel" data-toggle="tab" aria-selected="false">Contingents</a>
+        </li>
+        <li class="nav-item">
+            <a href="#HometownsPanel" id="HometownsTab" aria-controls="HometownsTab" role="tab" class="nav-link" name="HometownsPanel" data-toggle="tab" aria-selected="false">Hometowns</a>
+        </li>
+        <li class="nav-item">
+            <a href="#GendersPanel" id="GendersTab" aria-controls="GendersTab" role="tab" class="nav-link" name="GendersPanel" data-toggle="tab" aria-selected="false">Genders</a>
+        </li>
+        <li class="nav-item">
+            <a href="#CoachesPanel" id="CoachesTab" aria-controls="CoachesTab" role="tab" class="nav-link" name="CoachesPanel" data-toggle="tab" aria-selected="false">Coaches</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade ml-3 show active" id="DefaultPanel">
+            <br />
+            <h4>
+                Select the lookup value to maintian from the tabs.
+            </h4>
         </div>
-        <div class="col-sm-6 col-md-4">
-            <h4 id="Hometowns">Hometowns</h4>
-            @Html.DropDownList("HometownsID", null, htmlAttributes: new { @size = 6, @class = "form-control" })
-            <div>
-                <a asp-controller="Hometowns" asp-action="Create">Create</a> |
-                <a asp-controller="Hometowns" asp-action="Edit" class="linkClick">Edit</a> |
-                <a asp-controller="Hometowns" asp-action="Delete" class="linkClick">Delete</a>
-            </div>
+        <div role="tabpanel" class="tab-pane fade ml-3" id="ContingentsPanel" aria-labelledby="Contingents-Panel">
+            <br />
         </div>
-        <div class="col-sm-6 col-md-4">
-            <h4 id="Genders">Genders</h4>
-            @Html.DropDownList("GendersID", null, htmlAttributes: new { @size = 6, @class = "form-control" })
-            <div>
-                <a asp-controller="Genders" asp-action="Create">Create</a> |
-                <a asp-controller="Genders" asp-action="Edit" class="linkClick">Edit</a> |
-                <a asp-controller="Genders" asp-action="Delete" class="linkClick">Delete</a>
-            </div>
+        <div role="tabpanel" class="tab-pane fade ml-3" id="HometownsPanel" aria-labelledby="Hometowns-Panel">
+            <br />
+        </div>
+        <div role="tabpanel" class="tab-pane fade ml-3" id="GendersPanel" aria-labelledby="Genders-Panel">
+            <br />
+        </div>
+        <div role="tabpanel" class="tab-pane fade ml-3" id="CoachesPanel" aria-labelledby="Coaches-Panel">
+            <br />
         </div>
     </div>
 </div>
+<hr />
+<br />
 @section Scripts {
     <script type="text/javascript">
-        $(".linkClick").click( function (event) {
+        function refreshTab(activeTab) {
+            switch (activeTab) {
+                case 'ContingentsPanel': $('#ContingentsPanel').load('/Lookups/Contingents');
+                    break;
+                case 'HometownsPanel': $('#HometownsPanel').load('/Lookups/Hometowns');
+                    break;
+                case 'GendersPanel': $('#GendersPanel').load('/Lookups/Genders');
+                    break;
+                case 'CoachesPanel': $('#CoachesPanel').load('/Lookups/Coaches');
+                    break;
+                default: break;
+            };
+            return;
+        };
+        $('.nav-link').click( function () {
+            var activeTab = $(this).attr("name");
+            refreshTab(activeTab);
+        });
+        $(".tab-content").on("click",".linkClick", function (event) {
             event.preventDefault();
             var address = $(this).attr("href");
             var lookup = address.split("/")[1];
@@ -48,6 +79,11 @@
             } else {
                 window.location.href = address + "/" + id;
             }
+        });
+        $(function () {
+            setTimeout(function () {
+                $("#@ViewData["Tab"]").trigger('click');
+            }, 10);
         });
     </script>
 }

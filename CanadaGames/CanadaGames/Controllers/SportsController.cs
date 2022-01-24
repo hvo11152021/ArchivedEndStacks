@@ -10,6 +10,7 @@ using CanadaGames.Models;
 using CanadaGames.Utilities;
 using Microsoft.EntityFrameworkCore.Storage;
 using CanadaGames.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CanadaGames.Controllers
 {
@@ -23,6 +24,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Sports
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public async Task<IActionResult> Index(int? page, int? pageSizeID)
         {
             //Clear the sort/filter/paging URL Cookie for Controller
@@ -35,7 +37,7 @@ namespace CanadaGames.Controllers
                     select d;
 
             //Handle Paging
-            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID);
+            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID, ControllerName());
             ViewData["pageSizeID"] = PageSizeHelper.PageSizeList(pageSize);
             var pagedData = await PaginatedList<Sport>.CreateAsync(sports.AsNoTracking(), page ?? 1, pageSize);
 
@@ -43,6 +45,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Sports/Details/5
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public async Task<IActionResult> Details(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -67,6 +70,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Sports/Create
+        [Authorize(Roles = "Admin, Supervisor")]
         public IActionResult Create()
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -81,6 +85,7 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Code,Name")] Sport sport, string[] selectedOptions)
         {
@@ -114,6 +119,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Sports/Edit/5
+        [Authorize(Roles = "Admin, Supervisor")]
         public async Task<IActionResult> Edit(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -141,6 +147,7 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, string[] selectedOptions)
         {
@@ -194,6 +201,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Sports/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -217,6 +225,7 @@ namespace CanadaGames.Controllers
 
         // POST: Sports/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

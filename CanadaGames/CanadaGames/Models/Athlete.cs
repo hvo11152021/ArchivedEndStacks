@@ -76,6 +76,10 @@ namespace CanadaGames.Models
         [StringLength(7)]//DS Note: we only include this to limit the size of the database field to 10
         public string AthleteCode { get; set; }
 
+        //[Required(ErrorMessage = "You cannot leave the Hometown blank.")]
+        //[StringLength(100, ErrorMessage = "Hometown cannot be more than 100 characters long.")]
+        //public string Hometown { get; set; }
+
         //[ValidateDOBRange] //I will leave it to IValidatableObject
         [Required(ErrorMessage = "You must enter the date of birth.")]
         [DataType(DataType.Date)]
@@ -113,6 +117,10 @@ namespace CanadaGames.Models
         [DataType(DataType.MultilineText)]
         public string MediaInfo { get; set; }
 
+        [ScaffoldColumn(false)]
+        [Timestamp]
+        public Byte[] RowVersion { get; set; }
+
         [Display(Name = "Contingent")]
         [Required(ErrorMessage = "You must select the Contingent")]
         public int ContingentID { get; set; }
@@ -128,14 +136,13 @@ namespace CanadaGames.Models
         public int GenderID { get; set; }
         public Gender Gender { get; set; }
 
-        [Display(Name = "Hometown")]
-        public int? HometownID { get; set; }
-        public Hometown Hometown { get; set; }
-
         [Display(Name = "Coach")]
         public int? CoachID { get; set; }
         public Coach Coach { get; set; }
 
+        [Display(Name = "Hometown")]
+        public int? HometownID { get; set; }
+        public Hometown Hometown { get; set; }
 
         [Display(Name = "Alternate Sports")]
         public ICollection<AthleteSport> AthleteSports { get; set; }

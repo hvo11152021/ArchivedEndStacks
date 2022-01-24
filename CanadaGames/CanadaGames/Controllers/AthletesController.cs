@@ -12,9 +12,15 @@ using CanadaGames.ViewModels;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Authorization;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using System.Drawing;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace CanadaGames.Controllers
 {
+    [Authorize]
     public class AthletesController : Controller
     {
         private readonly CanadaGamesContext _context;
@@ -26,6 +32,7 @@ namespace CanadaGames.Controllers
 
         // GET: Athletes
         public async Task<IActionResult> Index(string AthleteSearch, string MediaInfoSearch,
+            string sortDirectionCheck, string sortFieldID,
             int? ContingentID, int? CoachID, int? GenderID, int? SportID, 
             int? page, int? pageSizeID, string actionButton, 
             string sortDirection = "asc", string sortField = "Athlete")
@@ -33,28 +40,27 @@ namespace CanadaGames.Controllers
             //Clear the sort/filter/paging URL Cookie for Controller
             CookieHelper.CookieSet(HttpContext, ControllerName() + "URL", "", -1);
 
-            //Toggle the Open/Closed state of the collapse depending on if we are filtering
-            ViewData["Filtering"] = ""; //Asume not filtering
-            //Then in each "test" for filtering, add ViewData["Filtering"] = " show" if true;
+            //Change colour of the button when filtering by setting this default
+            ViewData["Filtering"] = "btn-outline-secondary";
+            //and then in each "test" for filtering, add ViewData["Filtering"] = "btn-danger" if true;
 
             //NOTE: make sure this array has matching values to the column headings
-            string[] sortOptions = new[] { "Athlete", "Age", "Hometown", "Main Sport" };
+            string[] sortOptions = new[] { "Athlete", "Age", "Cont.", "Main Sport" };
 
             PopulateDropDownLists();
 
             //Start with Includes but make sure your expression returns an
-            //IQueryable<Patient> so we can add filter and sort 
+            //IQueryable<Athlete> so we can add filter and sort 
             //options later.
             var athletes = from a in _context.Athletes
                 .Include(a => a.Coach)
-                //Include hometown
-                .Include(a => a.Hometown).ThenInclude(a => a.Contingent)
+                .Include(d => d.AthleteDocuments)
+                .Include(p => p.AthleteThumbnail)
+                .Include(a => a.Contingent)
                 .Include(a => a.Gender)
                 .Include(a => a.Sport)
-                .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
-                .Include(a => a.AthleteDocuments)
-                .Include(a => a.AthleteThumbnail)
-                           select a;
+                .Include(a => a.AthleteSports).ThenInclude(s=>s.Sport)
+                select a;
 
             //Add as many filters as needed
             if (ContingentID.HasValue)
@@ -101,6 +107,11 @@ namespace CanadaGames.Controllers
                         sortDirection = sortDirection == "asc" ? "desc" : "asc";
                     }
                     sortField = actionButton;//Sort by the button clicked
+                }
+                else //Sort by the controls in the filter area
+                {
+                    sortDirection = String.IsNullOrEmpty(sortDirectionCheck) ? "asc" : "desc";
+                    sortField = sortFieldID;
                 }
             }
             //Now we know which field and direction to sort by
@@ -174,8 +185,11 @@ namespace CanadaGames.Controllers
             ViewData["sortField"] = sortField;
             ViewData["sortDirection"] = sortDirection;
 
+            //SelectList for Sorting Options
+            ViewBag.sortFieldID = new SelectList(sortOptions, sortField.ToString());
+
             //Handle Paging
-            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID);
+            int pageSize = PageSizeHelper.SetPageSize(HttpContext, pageSizeID, ControllerName());
             ViewData["pageSizeID"] = PageSizeHelper.PageSizeList(pageSize);
 
             var pagedData = await PaginatedList<Athlete>.CreateAsync(athletes.AsNoTracking(), page ?? 1, pageSize);
@@ -184,6 +198,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Athletes/Details/5
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public async Task<IActionResult> Details(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -196,12 +211,13 @@ namespace CanadaGames.Controllers
 
             var athlete = await _context.Athletes
                 .Include(a => a.Coach)
+                .Include(p => p.AthletePhoto)
+                .Include(p => p.AthleteDocuments)
                 .Include(a => a.Contingent)
-                .Include(a => a.Hometown)
                 .Include(a => a.Gender)
                 .Include(a => a.Sport)
+                .Include(a => a.Hometown).ThenInclude(a => a.Contingent)
                 .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
-                .Include(a => a.AthletePhoto)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (athlete == null)
@@ -213,6 +229,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Athletes/Create
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         public IActionResult Create()
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -229,10 +246,12 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor, Staff")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FirstName,MiddleName,LastName,AthleteCode," +
-            "Hometown,DOB,Height,Weight,YearsInSport,Affiliation,Goals,MediaInfo,ContingentID," +
-            "SportID,GenderID,CoachID,HometownID")] Athlete athlete, string[] selectedOptions, List<IFormFile> theFiles, IFormFile thePicture)
+            "HometownID,DOB,Height,Weight,YearsInSport,Affiliation,Goals,MediaInfo,ContingentID," +
+            "SportID,GenderID,CoachID")] Athlete athlete, string[] selectedOptions, 
+            IFormFile thePicture, List<IFormFile> theFiles)
         {
             //URL with the last filter, sort and page parameters for this controller
             ViewDataReturnURL();
@@ -253,9 +272,9 @@ namespace CanadaGames.Controllers
                 }
                 if (ModelState.IsValid)
                 {
-                    _context.Add(athlete);
-                    await AddDocumentsAsync(athlete, theFiles);
                     await AddPicture(athlete, thePicture);
+                    await AddDocumentsAsync(athlete, theFiles);
+                    _context.Add(athlete);
                     await _context.SaveChangesAsync();
                     return RedirectToAction("Index", "AthletePlacements", new { AthleteID = athlete.ID });
                 }
@@ -282,6 +301,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Athletes/Edit/5
+        [Authorize(Roles = "Admin, Supervisor")]
         public async Task<IActionResult> Edit(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -293,9 +313,8 @@ namespace CanadaGames.Controllers
             }
 
             var athlete = await _context.Athletes
-                .Include(a => a.Hometown)
+                .Include(p => p.AthletePhoto)
                 .Include(d => d.AthleteDocuments)
-                .Include(a => a.AthletePhoto)
                 .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
                 .FirstOrDefaultAsync(p => p.ID == id);
 
@@ -313,9 +332,10 @@ namespace CanadaGames.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, int SportID, string[] selectedOptions, 
-            Byte[] RowVersion, List<IFormFile> theFiles, string chkRemoveImage, IFormFile thePicture)
+            Byte[] RowVersion, string chkRemoveImage, IFormFile thePicture, List<IFormFile> theFiles)
         {
             //URL with the last filter, sort and page parameters for this controller
             ViewDataReturnURL();
@@ -328,9 +348,8 @@ namespace CanadaGames.Controllers
 
             //Go get the athlete to update
             var athleteToUpdate = await _context.Athletes
-                .Include(a => a.Hometown)
+                .Include(p => p.AthletePhoto)
                 .Include(d => d.AthleteDocuments)
-                .Include(a => a.AthletePhoto)
                 .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
                 .FirstOrDefaultAsync(p => p.ID == id);
 
@@ -347,17 +366,18 @@ namespace CanadaGames.Controllers
 
             //Try updating it with the values posted
             if (await TryUpdateModelAsync<Athlete>(athleteToUpdate, "",
-                p => p.AthleteCode, p => p.FirstName, p => p.MiddleName, p => p.LastName, p => p.DOB,
+                p => p.AthleteCode, p => p.FirstName, p => p.MiddleName, p => p.LastName, p => p.DOB, p => p.HometownID,
                 p => p.Height, p => p.Weight, p => p.YearsInSport, p => p.Affiliation, p => p.Goals,
-                p => p.MediaInfo, p => p.ContingentID, p => p.HometownID, p => p.GenderID, p => p.CoachID, p => p.SportID))
+                p => p.MediaInfo, p => p.ContingentID, p => p.GenderID, p => p.CoachID, p => p.SportID))
             {
                 try
                 {
+                    //For the image
                     if (chkRemoveImage != null)
                     {
                         //If we are just deleting the two versions of the photo, we need to make sure the Change Tracker knows
                         //about them both so go get the Thumbnail since we did not include it.
-                        athleteToUpdate.AthleteThumbnail = _context.AthleteThumbnails.Where(a => a.AthleteID == athleteToUpdate.ID).FirstOrDefault();
+                        athleteToUpdate.AthleteThumbnail = _context.AthleteThumbnails.Where(p => p.AthleteID == athleteToUpdate.ID).FirstOrDefault();
                         //Then, setting them to null will cause them to be deleted from the database.
                         athleteToUpdate.AthletePhoto = null;
                         athleteToUpdate.AthleteThumbnail = null;
@@ -399,13 +419,9 @@ namespace CanadaGames.Controllers
                         if (databaseValues.AthleteCode != clientValues.AthleteCode)
                             ModelState.AddModelError("AthleteCode", "Current value: "
                                 + databaseValues.AthleteCode);
-                        //if (databaseValues.Hometown != clientValues.Hometown)
-                        //    ModelState.AddModelError("Hometown", "Current value: "
-                        //        + databaseValues.Hometown);
                         if (databaseValues.DOB != clientValues.DOB)
                             ModelState.AddModelError("DOB", "Current value: "
                                 + String.Format("{0:d}", databaseValues.DOB));
-
                         if (databaseValues.Height != clientValues.Height)
                             ModelState.AddModelError("Height", "Current value: "
                                 + databaseValues.Height);
@@ -446,7 +462,7 @@ namespace CanadaGames.Controllers
                             Gender databaseGender = await _context.Genders.SingleOrDefaultAsync(i => i.ID == databaseValues.GenderID);
                             ModelState.AddModelError("GenderID", $"Current value: {databaseGender?.Name}");
                         }
-                        //A little extra work for the nullable foreign key.  No sense going to the database and asking for something
+                        //A little extra work for the nullable foreign keys.  No sense going to the database and asking for something
                         //we already know is not there.
                         if (databaseValues.CoachID != clientValues.CoachID)
                         {
@@ -466,7 +482,7 @@ namespace CanadaGames.Controllers
                             if (databaseValues.HometownID.HasValue)
                             {
                                 Hometown databaseHometown = await _context.Hometowns.SingleOrDefaultAsync(i => i.ID == databaseValues.HometownID);
-                                ModelState.AddModelError("HometownID", $"Current value: {databaseHometown?.Name}");
+                                ModelState.AddModelError("HometownID", $"Current value: {databaseHometown?.HometownContingent}");
                             }
                             else
 
@@ -502,6 +518,7 @@ namespace CanadaGames.Controllers
         }
 
         // GET: Athletes/Delete/5
+        [Authorize(Roles = "Admin, Supervisor")]
         public async Task<IActionResult> Delete(int? id)
         {
             //URL with the last filter, sort and page parameters for this controller
@@ -515,9 +532,9 @@ namespace CanadaGames.Controllers
             var athlete = await _context.Athletes
                 .Include(a => a.Coach)
                 .Include(a => a.Contingent)
-                .Include(a => a.Hometown)
                 .Include(a => a.Gender)
                 .Include(a => a.Sport)
+                .Include(a => a.Hometown).ThenInclude(a => a.Contingent)
                 .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
@@ -531,6 +548,7 @@ namespace CanadaGames.Controllers
 
         // POST: Athletes/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin, Supervisor")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -540,9 +558,9 @@ namespace CanadaGames.Controllers
             var athlete = await _context.Athletes
                 .Include(a => a.Coach)
                 .Include(a => a.Contingent)
-                .Include(a => a.Hometown)
                 .Include(a => a.Gender)
                 .Include(a => a.Sport)
+                .Include(a => a.Hometown).ThenInclude(a => a.Contingent)
                 .Include(a => a.AthleteSports).ThenInclude(s => s.Sport)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
@@ -562,79 +580,144 @@ namespace CanadaGames.Controllers
 
         }
 
-        public async Task<FileContentResult> Download(int id)
+        public IActionResult PlacementReport()
         {
-            var theFile = await _context.UploadedFiles
-                .Include(d => d.FileContent)
-                .Where(f => f.ID == id)
-                .FirstOrDefaultAsync();
-            return File(theFile.FileContent.Content, theFile.FileContent.MimeType, theFile.FileName);
+            var sumQ = _context.Placements
+                .Include(a => a.Athlete)
+                .GroupBy(a => new { a.AthleteID, a.Athlete.Contingent.Code, a.Athlete.LastName, a.Athlete.FirstName, a.Athlete.MiddleName })
+                .Select(grp => new PlacementReport
+                {
+                    ID = grp.Key.AthleteID,
+                    ContingentCode = grp.Key.Code,
+                    FirstName = grp.Key.FirstName,
+                    MiddleName = grp.Key.MiddleName,
+                    LastName = grp.Key.LastName,
+                    AvgPlace = Math.Round((grp.Average(p => p.Place)), 2),
+                    MaxPlace = grp.Min(p => p.Place),
+                    MinPlace = grp.Max(p => p.Place),
+                    NumberOfEvents = grp.Count()
+                });
+
+            return View(sumQ.AsNoTracking().ToList());
         }
 
-        private async Task AddDocumentsAsync(Athlete athlete, List<IFormFile> theFiles)
+        [Authorize(Roles = "Admin")]
+        public IActionResult DownloadPlacements()
         {
-            foreach (var f in theFiles)
-            {
-                if (f != null)
-                {
-                    string mimeType = f.ContentType;
-                    string fileName = Path.GetFileName(f.FileName);
-                    long fileLength = f.Length;
+            var plcmt = from a in _context.Placements
+                        .Include(a => a.Athlete)
+                        .ThenInclude(p => p.Contingent)
+                        .GroupBy(a => new { a.AthleteID, a.Athlete.Contingent.Code, a.Athlete.LastName, a.Athlete.FirstName, a.Athlete.MiddleName, a.Athlete.MediaInfo})
+                        .Select(grp => new PlacementReport
+                        {
+                            ID = grp.Key.AthleteID,
+                            ContingentCode = grp.Key.Code,
+                            FirstName = grp.Key.FirstName,
+                            MiddleName = grp.Key.MiddleName,
+                            LastName = grp.Key.LastName,
+                            AvgPlace = Math.Round((grp.Average(p => p.Place)), 2),
+                            MaxPlace = grp.Min(p => p.Place),
+                            MinPlace = grp.Max(p => p.Place),
+                            MediaInfo = grp.Key.MediaInfo,
+                            NumberOfEvents = grp.Count()
+                        })
+                        orderby a.FirstName descending
+                        select new
+                        {
+                            Athlete = a.FullName,
+                            Contingent = a.ContingentCode,
+                            Average_Place = a.AvgPlace,
+                            Highest_Place = a.MaxPlace,
+                            Lowest_Place = a.MinPlace,
+                            Number_Of_Events = a.NumberOfEvents,
+                            Comments = a.MediaInfo
+                        };
+            int numRows = plcmt.Count();
 
-                    if (!(fileName == "" || fileLength == 0))
+            //Create a new spreadsheet
+            if (numRows > 0)
+            {
+                using (ExcelPackage excel = new ExcelPackage())
+                {
+                    var workSheet = excel.Workbook.Worksheets.Add("Placements");
+
+                    workSheet.Cells[3, 1].LoadFromCollection(plcmt, true);
+                    workSheet.Cells[4, 1, numRows + 3, 2].Style.Font.Bold = true;
+
+                    using (ExcelRange totalAthletes = workSheet.Cells[numRows + 4, 1])//
                     {
-                        AthleteDocument a = new AthleteDocument();
+                        totalAthletes.Formula = $"SUMPRODUCT(--(FREQUENCY(MATCH({workSheet.Cells[4, 1].Address}:{workSheet.Cells[numRows + 3, 1].Address},{workSheet.Cells[4, 1].Address}:{workSheet.Cells[numRows + 3, 1].Address}, 0), ROW({workSheet.Cells[4, 1].Address}:{workSheet.Cells[numRows + 3, 1].Address}) - ROW({workSheet.Cells[4, 1].Address}) + 1) > 0))";
+                        totalAthletes.Style.Font.Bold = true;
+                    }
+
+                    using (ExcelRange totalEvents = workSheet.Cells[numRows + 4, 6])//
+                    {
+                        totalEvents.Formula = $"MAX({workSheet.Cells[4, 6].Address}:{workSheet.Cells[numRows + 3, 6].Address})";
+                        totalEvents.Style.Font.Bold = true;
+                    }
+
+                    //Style của background and heading
+                    using (ExcelRange headings = workSheet.Cells[3, 1, 3, 7])
+                    {
+                        headings.Style.Font.Bold = true;
+                        var fill = headings.Style.Fill;
+                        fill.PatternType = ExcelFillStyle.Solid;
+                        fill.BackgroundColor.SetColor(Color.LightBlue);
+                    }
+                    workSheet.Cells.AutoFitColumns();
+
+                    workSheet.Cells[1, 1].Value = "Placement Report";
+                    using (ExcelRange Rng = workSheet.Cells[1, 1, 1, 6])
+                    {
+                        Rng.Merge = true;
+                        Rng.Style.Font.Bold = true;
+                        Rng.Style.Font.Size = 18;
+                        Rng.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    }
+
+                    //Adjust local times
+                    DateTime utcDate = DateTime.UtcNow;
+                    TimeZoneInfo esTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+                    DateTime localDate = TimeZoneInfo.ConvertTimeFromUtc(utcDate, esTimeZone);
+                    using (ExcelRange Rng = workSheet.Cells[2, 6])
+                    {
+                        Rng.Value = "Created: " + localDate.ToShortTimeString() + " on " +
+                            localDate.ToShortDateString();
+                        Rng.Style.Font.Bold = true;
+                        Rng.Style.Font.Size = 12;
+                        Rng.Style.HorizontalAlignment = ExcelHorizontalAlignment.Right;
+                    }
+
+                    //Download Excel
+                    var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
+                    if (syncIOFeature != null)
+                    {
+                        syncIOFeature.AllowSynchronousIO = true;
                         using (var memoryStream = new MemoryStream())
                         {
-                            await f.CopyToAsync(memoryStream);
-                            a.FileContent.Content = memoryStream.ToArray();
+                            Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                            Response.Headers["content-disposition"] = "attachment;  filename=Placements.xlsx";
+                            excel.SaveAs(memoryStream);
+                            memoryStream.WriteTo(Response.Body);
                         }
-                        a.FileContent.MimeType = mimeType;
-                        a.FileName = fileName;
-                        athlete.AthleteDocuments.Add(a);
-                    };
-                }
-            }
-        }
-
-        private async Task AddPicture(Athlete athlete, IFormFile thePicture)
-        {
-            if (thePicture != null)
-            {
-                string mimeType = thePicture.ContentType;
-                long fileLength = thePicture.Length;
-                if (!(mimeType == "" || fileLength == 0))
-                {
-                    if (mimeType.Contains("image"))
+                    }
+                    else
                     {
-                        using var memoryStream = new MemoryStream();
-                        await thePicture.CopyToAsync(memoryStream);
-                        var pictureArray = memoryStream.ToArray();
-
-                        //Check if app are replacing or creating new
-                        if (athlete.AthletePhoto != null)
+                        try
                         {
-                            athlete.AthletePhoto.Content = ResizeImage.shrinkImageWebp(pictureArray, 500, 600);
-
-                            athlete.AthleteThumbnail = _context.AthleteThumbnails.Where(a => a.AthleteID == athlete.ID).FirstOrDefault();
-                            athlete.AthleteThumbnail.Content = ResizeImage.shrinkImageWebp(pictureArray, 100, 120);
+                            Byte[] theData = excel.GetAsByteArray();
+                            string filename = "Placements.xlsx";
+                            string mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                            return File(theData, mimeType, filename);
                         }
-                        else //No pictures saved so start new
+                        catch (Exception)
                         {
-                            athlete.AthletePhoto = new AthletePhoto
-                            {
-                                Content = ResizeImage.shrinkImageWebp(pictureArray, 500, 600),
-                                MimeType = "image/webp"
-                            };
-                            athlete.AthleteThumbnail = new AthleteThumbnail
-                            {
-                                Content = ResizeImage.shrinkImageWebp(pictureArray, 100, 120),
-                                MimeType = "image/webp"
-                            };
+                            return NotFound();
                         }
                     }
                 }
             }
+            return NotFound();
         }
 
         private void PopulateAssignedSportData(Athlete athlete)
@@ -679,11 +762,102 @@ namespace CanadaGames.Controllers
             }
         }
 
+        private async Task AddPicture(Athlete athlete, IFormFile thePicture)
+        {
+            //Get the picture and save it with the Athlete (2 sizes)
+            if (thePicture != null)
+            {
+                string mimeType = thePicture.ContentType;
+                long fileLength = thePicture.Length;
+                if (!(mimeType == "" || fileLength == 0))//Looks like we have a file!!!
+                {
+                    if (mimeType.Contains("image"))
+                    {
+                        using var memoryStream = new MemoryStream();
+                        await thePicture.CopyToAsync(memoryStream);
+                        var pictureArray = memoryStream.ToArray();//Gives us the Byte[]
+
+                        //Check if we are replacing or creating new
+                        if (athlete.AthletePhoto != null)
+                        {
+                            //We already have pictures so just replace the Byte[]
+                            athlete.AthletePhoto.Content = ResizeImage.shrinkImageWebp(pictureArray, 200, 240);
+
+                            //Get the Thumbnail so we can update it.  Remember we didn't include it
+                            athlete.AthleteThumbnail = _context.AthleteThumbnails.Where(p => p.AthleteID == athlete.ID).FirstOrDefault();
+                            athlete.AthleteThumbnail.Content = ResizeImage.shrinkImageWebp(pictureArray, 80, 96);
+                        }
+                        else //No pictures saved so start new
+                        {
+                            athlete.AthletePhoto = new AthletePhoto
+                            {
+                                Content = ResizeImage.shrinkImageWebp(pictureArray, 200, 240),
+                                MimeType = "image/webp"
+                            };
+                            athlete.AthleteThumbnail = new AthleteThumbnail
+                            {
+                                Content = ResizeImage.shrinkImageWebp(pictureArray, 80, 96),
+                                MimeType = "image/webp"
+                            };
+                        }
+                    }
+                }
+            }
+        }
+
+        private async Task AddDocumentsAsync(Athlete athlete, List<IFormFile> theFiles)
+        {
+            foreach (var f in theFiles)
+            {
+                if (f != null)
+                {
+                    string mimeType = f.ContentType;
+                    string fileName = Path.GetFileName(f.FileName);
+                    long fileLength = f.Length;
+                    //Note: you could filter for mime types if you only want to allow
+                    //certain types of files.  I am allowing everything.
+                    if (!(fileName == "" || fileLength == 0))//Looks like we have a file!!!
+                    {
+                        AthleteDocument d = new AthleteDocument();
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await f.CopyToAsync(memoryStream);
+                            d.FileContent.Content = memoryStream.ToArray();
+                        }
+                        d.FileContent.MimeType = mimeType;
+                        d.FileName = fileName;
+                        athlete.AthleteDocuments.Add(d);
+                    };
+                }
+            }
+        }
+
+        public async Task<FileContentResult> Download(int id)
+        {
+            var theFile = await _context.UploadedFiles
+                .Include(d => d.FileContent)
+                .Where(f => f.ID == id)
+                .FirstOrDefaultAsync();
+            return File(theFile.FileContent.Content, theFile.FileContent.MimeType, theFile.FileName);
+        }
+
         private SelectList CoachSelectList(int? selectedId)
         {
             return new SelectList(_context.Coaches
                 .OrderBy(d => d.LastName)
                 .ThenBy(d => d.FirstName), "ID", "FormalName", selectedId);
+        }
+        private SelectList ContingentSelectList(int? selectedId)
+        {
+            return new SelectList(_context.Contingents
+                .OrderBy(d => d.Name), "ID", "Name", selectedId);
+        }
+        private SelectList HometownSelectList(int? ContingentID, int? selectedId)
+        {
+            var query = from c in _context.Hometowns.Include(c => c.Contingent)
+                        where c.ContingentID == ContingentID.GetValueOrDefault()
+                        select c;
+            return new SelectList(query.OrderBy(p => p.Name), "ID", "HometownContingent", selectedId);
         }
         private SelectList GenderSelectList(int? selectedId)
         {
@@ -695,28 +869,13 @@ namespace CanadaGames.Controllers
             return new SelectList(_context.Sports
                 .OrderBy(d => d.Name), "ID", "Name", selectedId);
         }
-        private SelectList ContingentSelectList(int? selectedId)
-        {
-            return new SelectList(_context.Contingents
-                .OrderBy(d => d.Name), "ID", "Name", selectedId);
-        }
-
-        private SelectList HometownSelectList(int? ContingentID, int? selectedId)
-        {
-            //Filter by ContingentID
-            var query = from h in _context.Hometowns.Include(c => c.Contingent)
-                        where h.ContingentID == ContingentID.GetValueOrDefault()
-                        select h;
-            return new SelectList(query.OrderBy(c => c.Name), "ID", "CityState", selectedId);
-        }
-
         private void PopulateDropDownLists(Athlete athlete = null)
         {
             ViewData["CoachID"] = CoachSelectList(athlete?.CoachID);
+            ViewData["ContingentID"] = ContingentSelectList(athlete?.ContingentID);
             ViewData["GenderID"] = GenderSelectList(athlete?.GenderID);
             ViewData["SportID"] = SportSelectList(athlete?.SportID);
-            ViewData["ContingentID"] = ContingentSelectList(athlete?.ContingentID);
-            ViewData["HometownID"] = HometownSelectList(null, null);
+            ViewData["HometownID"] = HometownSelectList(athlete?.ContingentID, athlete?.HometownID);
         }
 
         [HttpGet]

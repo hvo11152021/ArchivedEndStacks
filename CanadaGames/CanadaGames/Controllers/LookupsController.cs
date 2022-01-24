@@ -1,6 +1,8 @@
 ﻿using CanadaGames.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace CanadaGames.Controllers
 {
+    [Authorize]
     public class LookupsController : Controller
     {
         private readonly CanadaGamesContext _context;
@@ -17,12 +20,44 @@ namespace CanadaGames.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string Tab)
         {
-            ViewData["ContingentsID"] = new SelectList(_context.Contingents.OrderBy(c => c.Name), "ID", "Name");
-            ViewData["HometownsID"] = new SelectList(_context.Hometowns.OrderBy(h => h.Name), "ID", "Name");
-            ViewData["GendersID"] = new SelectList(_context.Genders.OrderBy(g => g.Name), "ID", "Name");
+            ///Note: select the tab you want to load by passing in
+            ///the ID of the tab.
+            ViewData["Tab"] = Tab;
             return View();
+        }
+
+        public PartialViewResult Genders()
+        {
+            ViewData["GendersID"] = new
+                SelectList(_context.Genders
+                .OrderBy(a => a.Name), "ID", "Name");
+            return PartialView("_Genders");
+        }
+
+        public PartialViewResult Contingents()
+        {
+            ViewData["ContingentsID"] = new
+                SelectList(_context.Contingents
+                .OrderBy(a => a.Name), "ID", "Name");
+            return PartialView("_Contingents");
+        }
+
+        public PartialViewResult Hometowns()
+        {
+            ViewData["HometownsID"] = new
+                SelectList(_context.Hometowns.Include(d=>d.Contingent)
+                .OrderBy(a => a.Name), "ID", "HometownContingent");
+            return PartialView("_Hometowns");
+        }
+
+        public PartialViewResult Coaches()
+        {
+            ViewData["CoachesID"] = new
+                SelectList(_context.Coaches
+                .OrderBy(c => c.FirstName), "ID", "FullName");
+            return PartialView("_Coaches");
         }
     }
 }

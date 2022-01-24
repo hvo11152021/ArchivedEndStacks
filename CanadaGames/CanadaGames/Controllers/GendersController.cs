@@ -22,25 +22,7 @@ namespace CanadaGames.Controllers
         // GET: Genders
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Lookups");
-        }
-
-        // GET: Genders/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var gender = await _context.Genders
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (gender == null)
-            {
-                return NotFound();
-            }
-
-            return View(gender);
+            return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
         }
 
         // GET: Genders/Create
@@ -62,14 +44,14 @@ namespace CanadaGames.Controllers
                 {
                     _context.Add(gender);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { gender.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
             }
             catch (DbUpdateException)
             {
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-
+            
             return View(gender);
         }
 
@@ -96,19 +78,19 @@ namespace CanadaGames.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
         {
-            var genderToUpdate = await _context.Genders.SingleOrDefaultAsync(g => g.ID == id);
-
+            var genderToUpdate = await _context.Genders.FindAsync(id);
             if (genderToUpdate == null)
             {
                 return NotFound();
             }
 
-            if (await TryUpdateModelAsync<Gender>(genderToUpdate, "", g => g.Code, g => g.Name))
+            if (await TryUpdateModelAsync<Gender>(genderToUpdate, "",
+                d => d.Name, d => d.Code))
             {
                 try
                 {
                     await _context.SaveChangesAsync();
-                    return RedirectToAction("Details", new { genderToUpdate.ID });
+                    return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -120,10 +102,6 @@ namespace CanadaGames.Controllers
                     {
                         throw;
                     }
-                }
-                catch (DbUpdateException)
-                {
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
                 }
             }
             return View(genderToUpdate);
@@ -157,13 +135,27 @@ namespace CanadaGames.Controllers
             {
                 _context.Genders.Remove(gender);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Lookups", new { Tab = ControllerName() + "Tab" });
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException dex)
             {
-                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                if (dex.GetBaseException().Message.Contains("FOREIGN KEY constraint failed"))
+                {
+                    ModelState.AddModelError("", "Unable to Delete. Remember, you cannot delete the Gender of any Athlete in the system.");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+                }
             }
             return View(gender);
+
+        }
+
+        //Add this...
+        private string ControllerName()
+        {
+            return this.ControllerContext.RouteData.Values["controller"].ToString();
         }
 
         private bool GenderExists(int id)

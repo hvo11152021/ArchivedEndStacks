@@ -1,17 +1,17 @@
 ﻿@model CanadaGames.Models.Hometown
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Hometown";
 }
 
-<h1>Edit</h1>
+<h2>Edit Hometown</h2>
 
-<h4>Hometown</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -26,12 +26,12 @@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</form>
 
 <div>
-    <a asp-controller="Lookups" asp-action="Index">Back to Lookup List</a>
+    <a asp-action="Index" asp-controller="Lookups" asp-route-Tab="HometownsTab">Back to Lookup List</a>
 </div>
 
 @section Scripts {
