@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace LittlePrinter
 {
@@ -23,6 +24,9 @@ namespace LittlePrinter
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<LittlePrinterContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("LittlePrinterContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

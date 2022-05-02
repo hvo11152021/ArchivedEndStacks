@@ -1,0 +1,589 @@
+﻿@model IEnumerable<LittlePrinter.Models.Tag>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CartonNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyerCartonNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StylePPJ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fab)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ColorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col000)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col00)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col9)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col10)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col13)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col14)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col15)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col16)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col17)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col18)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col19)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col20)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col21)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col22)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col23)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col24)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col25)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col26)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col27)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col28)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col29)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col30)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col31)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col32)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col33)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col34)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col35)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col36)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col37)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col38)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col39)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col40)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col41)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col42)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col43)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col44)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col45)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col46)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col47)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col48)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col49)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col50)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col51)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col52)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col53)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col54)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col55)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col56)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col57)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col58)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col59)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Col60)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size2XS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeXS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeXL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size2XL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size3XL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeX1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeX2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeX3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SizeLL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size3L)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size4L)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size5L)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CartonQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPieces)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalNetWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalGrossWeight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dimension)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartonNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerCartonNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StylePPJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fab)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col000)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col00)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col9)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col10)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col11)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col12)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col13)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col14)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col15)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col16)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col17)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col18)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col19)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col20)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col21)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col22)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col23)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col24)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col25)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col26)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col27)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col28)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col29)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col30)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col31)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col32)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col33)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col34)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col35)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col36)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col37)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col38)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col39)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col40)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col41)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col42)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col43)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col44)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col45)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col46)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col47)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col48)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col49)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col50)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col51)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col52)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col53)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col54)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col55)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col56)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col57)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col58)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col59)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Col60)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size2XS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeXS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeXL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size2XL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size3XL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeX1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeX2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeX3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeLL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size3L)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size4L)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size5L)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CartonQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPieces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalNetWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGrossWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dimension)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
