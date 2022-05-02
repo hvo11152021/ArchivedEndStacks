@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\models\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\models\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TagInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Models\\TagInfo.cs",
+              "RelativeDocumentMoniker": "LittlePrinter\\Models\\TagInfo.cs",
+              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Models\\TagInfo.cs",
+              "RelativeToolTip": "LittlePrinter\\Models\\TagInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T01:35:07.612Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
