@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using LittlePrinter.Models;
 
+namespace LittlePrinter.Data
+{
     public class LittlePrinterContext : DbContext
     {
         public LittlePrinterContext (DbContextOptions<LittlePrinterContext> options)
@@ -12,5 +14,10 @@ using LittlePrinter.Models;
         {
         }
 
-        public DbSet<LittlePrinter.Models.Tag> Tag { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
+}
