@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LittlePrinter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0356bfc25adfcde327f2307b6c1eab086b4d312e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5efb8da3760b2a84e94bde9314d5a5748e25ffe4")]
 [assembly: System.Reflection.AssemblyProductAttribute("LittlePrinter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LittlePrinter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
