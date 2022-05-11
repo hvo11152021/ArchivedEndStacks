@@ -2,7 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="transition_container">
+    <div class="row">
+        <div class="card m-3 shadow mb-5 bg-body rounded" style="width: 18rem;">
+            <img src="~/img/applying_label_to_shipping_box.webp" class="card-img-top" alt="carton labels">
+            <div class="card-body">
+                <h5 class="card-title">Create Carton Labels</h5>
+                <p class="card-text">Create an Excel sheet of custom carton labels.</p>
+                <p class="card-text">Tạo một tệp excel mới với những nhãn thùng giấy.</p>
+                <a class="btn btn-primary" asp-area="" asp-controller="Tags" asp-action="Index">Get started</a>
+            </div>
+        </div>
+        <div class="card m-3 shadow mb-5 bg-body rounded" style="width: 18rem;">
+            <img src="~/img/women_checking_files.jpg" class="card-img-top" alt="processing files">
+            <div class="card-body">
+                <h5 class="card-title">Excel File Converter</h5>
+                <p class="card-text">Transform regular spreadsheets into data for carton labels.</p>
+                <p class="card-text">Biến đổi những trang excels thành dữ liệu làm nhãn thùng giấy.</p>
+                <button class="btn btn-primary" disabled>Coming soon!</button>
+                @*<a class="btn btn-primary" asp-area="" asp-controller="CartonLabels" asp-action="Index">Get started</a>*@
+            </div>
+        </div>
+    </div>
 </div>
