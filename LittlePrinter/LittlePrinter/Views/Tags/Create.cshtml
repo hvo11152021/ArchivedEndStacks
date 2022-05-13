@@ -1,494 +1,656 @@
 ﻿@model LittlePrinter.Models.Tag
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
 }
 
-<!DOCTYPE html>
+<h1>Create Label</h1>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
-
-<h4>Tag</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="CartonNumber" class="control-label"></label>
-                <input asp-for="CartonNumber" class="form-control" />
-                <span asp-validation-for="CartonNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="BuyerCartonNumber" class="control-label"></label>
-                <input asp-for="BuyerCartonNumber" class="form-control" />
-                <span asp-validation-for="BuyerCartonNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StylePPJ" class="control-label"></label>
-                <input asp-for="StylePPJ" class="form-control" />
-                <span asp-validation-for="StylePPJ" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Brand" class="control-label"></label>
-                <input asp-for="Brand" class="form-control" />
-                <span asp-validation-for="Brand" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Fab" class="control-label"></label>
-                <input asp-for="Fab" class="form-control" />
-                <span asp-validation-for="Fab" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ColorName" class="control-label"></label>
-                <input asp-for="ColorName" class="form-control" />
-                <span asp-validation-for="ColorName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col000" class="control-label"></label>
-                <input asp-for="Col000" class="form-control" />
-                <span asp-validation-for="Col000" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col00" class="control-label"></label>
-                <input asp-for="Col00" class="form-control" />
-                <span asp-validation-for="Col00" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col0" class="control-label"></label>
-                <input asp-for="Col0" class="form-control" />
-                <span asp-validation-for="Col0" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col1" class="control-label"></label>
-                <input asp-for="Col1" class="form-control" />
-                <span asp-validation-for="Col1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col2" class="control-label"></label>
-                <input asp-for="Col2" class="form-control" />
-                <span asp-validation-for="Col2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col3" class="control-label"></label>
-                <input asp-for="Col3" class="form-control" />
-                <span asp-validation-for="Col3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col4" class="control-label"></label>
-                <input asp-for="Col4" class="form-control" />
-                <span asp-validation-for="Col4" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col5" class="control-label"></label>
-                <input asp-for="Col5" class="form-control" />
-                <span asp-validation-for="Col5" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col6" class="control-label"></label>
-                <input asp-for="Col6" class="form-control" />
-                <span asp-validation-for="Col6" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col7" class="control-label"></label>
-                <input asp-for="Col7" class="form-control" />
-                <span asp-validation-for="Col7" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col8" class="control-label"></label>
-                <input asp-for="Col8" class="form-control" />
-                <span asp-validation-for="Col8" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col9" class="control-label"></label>
-                <input asp-for="Col9" class="form-control" />
-                <span asp-validation-for="Col9" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col10" class="control-label"></label>
-                <input asp-for="Col10" class="form-control" />
-                <span asp-validation-for="Col10" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col11" class="control-label"></label>
-                <input asp-for="Col11" class="form-control" />
-                <span asp-validation-for="Col11" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col12" class="control-label"></label>
-                <input asp-for="Col12" class="form-control" />
-                <span asp-validation-for="Col12" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col13" class="control-label"></label>
-                <input asp-for="Col13" class="form-control" />
-                <span asp-validation-for="Col13" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col14" class="control-label"></label>
-                <input asp-for="Col14" class="form-control" />
-                <span asp-validation-for="Col14" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col15" class="control-label"></label>
-                <input asp-for="Col15" class="form-control" />
-                <span asp-validation-for="Col15" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col16" class="control-label"></label>
-                <input asp-for="Col16" class="form-control" />
-                <span asp-validation-for="Col16" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col17" class="control-label"></label>
-                <input asp-for="Col17" class="form-control" />
-                <span asp-validation-for="Col17" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col18" class="control-label"></label>
-                <input asp-for="Col18" class="form-control" />
-                <span asp-validation-for="Col18" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col19" class="control-label"></label>
-                <input asp-for="Col19" class="form-control" />
-                <span asp-validation-for="Col19" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col20" class="control-label"></label>
-                <input asp-for="Col20" class="form-control" />
-                <span asp-validation-for="Col20" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col21" class="control-label"></label>
-                <input asp-for="Col21" class="form-control" />
-                <span asp-validation-for="Col21" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col22" class="control-label"></label>
-                <input asp-for="Col22" class="form-control" />
-                <span asp-validation-for="Col22" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col23" class="control-label"></label>
-                <input asp-for="Col23" class="form-control" />
-                <span asp-validation-for="Col23" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col24" class="control-label"></label>
-                <input asp-for="Col24" class="form-control" />
-                <span asp-validation-for="Col24" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col25" class="control-label"></label>
-                <input asp-for="Col25" class="form-control" />
-                <span asp-validation-for="Col25" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col26" class="control-label"></label>
-                <input asp-for="Col26" class="form-control" />
-                <span asp-validation-for="Col26" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col27" class="control-label"></label>
-                <input asp-for="Col27" class="form-control" />
-                <span asp-validation-for="Col27" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col28" class="control-label"></label>
-                <input asp-for="Col28" class="form-control" />
-                <span asp-validation-for="Col28" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col29" class="control-label"></label>
-                <input asp-for="Col29" class="form-control" />
-                <span asp-validation-for="Col29" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col30" class="control-label"></label>
-                <input asp-for="Col30" class="form-control" />
-                <span asp-validation-for="Col30" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col31" class="control-label"></label>
-                <input asp-for="Col31" class="form-control" />
-                <span asp-validation-for="Col31" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col32" class="control-label"></label>
-                <input asp-for="Col32" class="form-control" />
-                <span asp-validation-for="Col32" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col33" class="control-label"></label>
-                <input asp-for="Col33" class="form-control" />
-                <span asp-validation-for="Col33" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col34" class="control-label"></label>
-                <input asp-for="Col34" class="form-control" />
-                <span asp-validation-for="Col34" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col35" class="control-label"></label>
-                <input asp-for="Col35" class="form-control" />
-                <span asp-validation-for="Col35" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col36" class="control-label"></label>
-                <input asp-for="Col36" class="form-control" />
-                <span asp-validation-for="Col36" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col37" class="control-label"></label>
-                <input asp-for="Col37" class="form-control" />
-                <span asp-validation-for="Col37" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col38" class="control-label"></label>
-                <input asp-for="Col38" class="form-control" />
-                <span asp-validation-for="Col38" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col39" class="control-label"></label>
-                <input asp-for="Col39" class="form-control" />
-                <span asp-validation-for="Col39" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col40" class="control-label"></label>
-                <input asp-for="Col40" class="form-control" />
-                <span asp-validation-for="Col40" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col41" class="control-label"></label>
-                <input asp-for="Col41" class="form-control" />
-                <span asp-validation-for="Col41" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col42" class="control-label"></label>
-                <input asp-for="Col42" class="form-control" />
-                <span asp-validation-for="Col42" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col43" class="control-label"></label>
-                <input asp-for="Col43" class="form-control" />
-                <span asp-validation-for="Col43" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col44" class="control-label"></label>
-                <input asp-for="Col44" class="form-control" />
-                <span asp-validation-for="Col44" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col45" class="control-label"></label>
-                <input asp-for="Col45" class="form-control" />
-                <span asp-validation-for="Col45" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col46" class="control-label"></label>
-                <input asp-for="Col46" class="form-control" />
-                <span asp-validation-for="Col46" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col47" class="control-label"></label>
-                <input asp-for="Col47" class="form-control" />
-                <span asp-validation-for="Col47" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col48" class="control-label"></label>
-                <input asp-for="Col48" class="form-control" />
-                <span asp-validation-for="Col48" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col49" class="control-label"></label>
-                <input asp-for="Col49" class="form-control" />
-                <span asp-validation-for="Col49" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col50" class="control-label"></label>
-                <input asp-for="Col50" class="form-control" />
-                <span asp-validation-for="Col50" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col51" class="control-label"></label>
-                <input asp-for="Col51" class="form-control" />
-                <span asp-validation-for="Col51" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col52" class="control-label"></label>
-                <input asp-for="Col52" class="form-control" />
-                <span asp-validation-for="Col52" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col53" class="control-label"></label>
-                <input asp-for="Col53" class="form-control" />
-                <span asp-validation-for="Col53" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col54" class="control-label"></label>
-                <input asp-for="Col54" class="form-control" />
-                <span asp-validation-for="Col54" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col55" class="control-label"></label>
-                <input asp-for="Col55" class="form-control" />
-                <span asp-validation-for="Col55" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col56" class="control-label"></label>
-                <input asp-for="Col56" class="form-control" />
-                <span asp-validation-for="Col56" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col57" class="control-label"></label>
-                <input asp-for="Col57" class="form-control" />
-                <span asp-validation-for="Col57" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col58" class="control-label"></label>
-                <input asp-for="Col58" class="form-control" />
-                <span asp-validation-for="Col58" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col59" class="control-label"></label>
-                <input asp-for="Col59" class="form-control" />
-                <span asp-validation-for="Col59" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Col60" class="control-label"></label>
-                <input asp-for="Col60" class="form-control" />
-                <span asp-validation-for="Col60" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size2XS" class="control-label"></label>
-                <input asp-for="Size2XS" class="form-control" />
-                <span asp-validation-for="Size2XS" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeXS" class="control-label"></label>
-                <input asp-for="SizeXS" class="form-control" />
-                <span asp-validation-for="SizeXS" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeS" class="control-label"></label>
-                <input asp-for="SizeS" class="form-control" />
-                <span asp-validation-for="SizeS" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeM" class="control-label"></label>
-                <input asp-for="SizeM" class="form-control" />
-                <span asp-validation-for="SizeM" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeL" class="control-label"></label>
-                <input asp-for="SizeL" class="form-control" />
-                <span asp-validation-for="SizeL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeXL" class="control-label"></label>
-                <input asp-for="SizeXL" class="form-control" />
-                <span asp-validation-for="SizeXL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size2XL" class="control-label"></label>
-                <input asp-for="Size2XL" class="form-control" />
-                <span asp-validation-for="Size2XL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size3XL" class="control-label"></label>
-                <input asp-for="Size3XL" class="form-control" />
-                <span asp-validation-for="Size3XL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeX" class="control-label"></label>
-                <input asp-for="SizeX" class="form-control" />
-                <span asp-validation-for="SizeX" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeX1" class="control-label"></label>
-                <input asp-for="SizeX1" class="form-control" />
-                <span asp-validation-for="SizeX1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeX2" class="control-label"></label>
-                <input asp-for="SizeX2" class="form-control" />
-                <span asp-validation-for="SizeX2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeX3" class="control-label"></label>
-                <input asp-for="SizeX3" class="form-control" />
-                <span asp-validation-for="SizeX3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SizeLL" class="control-label"></label>
-                <input asp-for="SizeLL" class="form-control" />
-                <span asp-validation-for="SizeLL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size3L" class="control-label"></label>
-                <input asp-for="Size3L" class="form-control" />
-                <span asp-validation-for="Size3L" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size4L" class="control-label"></label>
-                <input asp-for="Size4L" class="form-control" />
-                <span asp-validation-for="Size4L" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Size5L" class="control-label"></label>
-                <input asp-for="Size5L" class="form-control" />
-                <span asp-validation-for="Size5L" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalQuantity" class="control-label"></label>
-                <input asp-for="TotalQuantity" class="form-control" />
-                <span asp-validation-for="TotalQuantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CartonQuantity" class="control-label"></label>
-                <input asp-for="CartonQuantity" class="form-control" />
-                <span asp-validation-for="CartonQuantity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalPieces" class="control-label"></label>
-                <input asp-for="TotalPieces" class="form-control" />
-                <span asp-validation-for="TotalPieces" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalNetWeight" class="control-label"></label>
-                <input asp-for="TotalNetWeight" class="form-control" />
-                <span asp-validation-for="TotalNetWeight" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TotalGrossWeight" class="control-label"></label>
-                <input asp-for="TotalGrossWeight" class="form-control" />
-                <span asp-validation-for="TotalGrossWeight" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Dimension" class="control-label"></label>
-                <input asp-for="Dimension" class="form-control" />
-                <span asp-validation-for="Dimension" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="transition_container">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="hidden" asp-for="ID" />
+                <div class="form-group">
+                    <label asp-for="CartonNumber" class="control-label"></label>
+                    <input asp-for="CartonNumber" class="form-control" />
+                    <span asp-validation-for="CartonNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BuyerCartonNumber" class="control-label"></label>
+                    <input asp-for="BuyerCartonNumber" class="form-control" />
+                    <span asp-validation-for="BuyerCartonNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StylePPJ" class="control-label"></label>
+                    <input asp-for="StylePPJ" class="form-control" />
+                    <span asp-validation-for="StylePPJ" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Brand" class="control-label"></label>
+                    <input asp-for="Brand" class="form-control" />
+                    <span asp-validation-for="Brand" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Fab" class="control-label"></label>
+                    <input asp-for="Fab" class="form-control" />
+                    <span asp-validation-for="Fab" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ColorName" class="control-label"></label>
+                    <input asp-for="ColorName" class="form-control" />
+                    <span asp-validation-for="ColorName" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-responsive">
+                <tr>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col00" class="control-label"></label>
+                            <input asp-for="Col00" value="0" class="form-control" />
+                            <span asp-validation-for="Col00" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col0" class="control-label"></label>
+                            <input asp-for="Col0" value="0" class="form-control" />
+                            <span asp-validation-for="Col0" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col1" class="control-label"></label>
+                            <input asp-for="Col1" value="0" class="form-control" />
+                            <span asp-validation-for="Col1" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col2" class="control-label"></label>
+                            <input asp-for="Col2" value="0" class="form-control" />
+                            <span asp-validation-for="Col2" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col3" class="control-label"></label>
+                            <input asp-for="Col3" value="0" class="form-control" />
+                            <span asp-validation-for="Col3" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col4" class="control-label"></label>
+                            <input asp-for="Col4" value="0" class="form-control" />
+                            <span asp-validation-for="Col4" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col5" class="control-label"></label>
+                            <input asp-for="Col5" value="0" class="form-control" />
+                            <span asp-validation-for="Col5" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col6" class="control-label"></label>
+                            <input asp-for="Col6" value="0" class="form-control" />
+                            <span asp-validation-for="Col6" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col7" class="control-label"></label>
+                            <input asp-for="Col7" value="0" class="form-control" />
+                            <span asp-validation-for="Col7" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col8" class="control-label"></label>
+                            <input asp-for="Col8" value="0" class="form-control" />
+                            <span asp-validation-for="Col8" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col9" class="control-label"></label>
+                            <input asp-for="Col9" value="0" class="form-control" />
+                            <span asp-validation-for="Col9" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col10" class="control-label"></label>
+                            <input asp-for="Col10" value="0" class="form-control" />
+                            <span asp-validation-for="Col10" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col11" class="control-label"></label>
+                            <input asp-for="Col11" value="0" class="form-control" />
+                            <span asp-validation-for="Col11" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col12" class="control-label"></label>
+                            <input asp-for="Col12" value="0" class="form-control" />
+                            <span asp-validation-for="Col12" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col13" class="control-label"></label>
+                            <input asp-for="Col13" value="0" class="form-control" />
+                            <span asp-validation-for="Col13" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col14" class="control-label"></label>
+                            <input asp-for="Col14" value="0" class="form-control" />
+                            <span asp-validation-for="Col14" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col15" class="control-label"></label>
+                            <input asp-for="Col15" value="0" class="form-control" />
+                            <span asp-validation-for="Col15" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col16" class="control-label"></label>
+                            <input asp-for="Col16" value="0" class="form-control" />
+                            <span asp-validation-for="Col16" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col17" class="control-label"></label>
+                            <input asp-for="Col17" value="0" class="form-control" />
+                            <span asp-validation-for="Col17" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col18" class="control-label"></label>
+                            <input asp-for="Col18" value="0" class="form-control" />
+                            <span asp-validation-for="Col18" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col19" class="control-label"></label>
+                            <input asp-for="Col19" value="0" class="form-control" />
+                            <span asp-validation-for="Col19" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col20" class="control-label"></label>
+                            <input asp-for="Col20" value="0" class="form-control" />
+                            <span asp-validation-for="Col20" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col21" class="control-label"></label>
+                            <input asp-for="Col21" value="0" class="form-control" />
+                            <span asp-validation-for="Col21" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col22" class="control-label"></label>
+                            <input asp-for="Col22" value="0" class="form-control" />
+                            <span asp-validation-for="Col22" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col23" class="control-label"></label>
+                            <input asp-for="Col23" value="0" class="form-control" />
+                            <span asp-validation-for="Col23" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col24" class="control-label"></label>
+                            <input asp-for="Col24" value="0" class="form-control" />
+                            <span asp-validation-for="Col24" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col25" class="control-label"></label>
+                            <input asp-for="Col25" value="0" class="form-control" />
+                            <span asp-validation-for="Col25" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col26" class="control-label"></label>
+                            <input asp-for="Col26" value="0" class="form-control" />
+                            <span asp-validation-for="Col26" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col27" class="control-label"></label>
+                            <input asp-for="Col27" value="0" class="form-control" />
+                            <span asp-validation-for="Col27" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col28" class="control-label"></label>
+                            <input asp-for="Col28" value="0" class="form-control" />
+                            <span asp-validation-for="Col28" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col29" class="control-label"></label>
+                            <input asp-for="Col29" value="0" class="form-control" />
+                            <span asp-validation-for="Col29" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col30" class="control-label"></label>
+                            <input asp-for="Col30" value="0" class="form-control" />
+                            <span asp-validation-for="Col30" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col31" class="control-label"></label>
+                            <input asp-for="Col31" value="0" class="form-control" />
+                            <span asp-validation-for="Col31" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col32" class="control-label"></label>
+                            <input asp-for="Col32" value="0" class="form-control" />
+                            <span asp-validation-for="Col32" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col33" class="control-label"></label>
+                            <input asp-for="Col33" value="0" class="form-control" />
+                            <span asp-validation-for="Col33" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col34" class="control-label"></label>
+                            <input asp-for="Col34" value="0" class="form-control" />
+                            <span asp-validation-for="Col34" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col35" class="control-label"></label>
+                            <input asp-for="Col35" value="0" class="form-control" />
+                            <span asp-validation-for="Col35" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col36" class="control-label"></label>
+                            <input asp-for="Col36" value="0" class="form-control" />
+                            <span asp-validation-for="Col36" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col37" class="control-label"></label>
+                            <input asp-for="Col37" value="0" class="form-control" />
+                            <span asp-validation-for="Col37" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col38" class="control-label"></label>
+                            <input asp-for="Col38" value="0" class="form-control" />
+                            <span asp-validation-for="Col38" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col39" class="control-label"></label>
+                            <input asp-for="Col39" value="0" class="form-control" />
+                            <span asp-validation-for="Col39" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col40" class="control-label"></label>
+                            <input asp-for="Col40" value="0" class="form-control" />
+                            <span asp-validation-for="Col40" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col41" class="control-label"></label>
+                            <input asp-for="Col41" value="0" class="form-control" />
+                            <span asp-validation-for="Col41" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col42" class="control-label"></label>
+                            <input asp-for="Col42" value="0" class="form-control" />
+                            <span asp-validation-for="Col42" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col43" class="control-label"></label>
+                            <input asp-for="Col43" value="0" class="form-control" />
+                            <span asp-validation-for="Col43" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col44" class="control-label"></label>
+                            <input asp-for="Col44" value="0" class="form-control" />
+                            <span asp-validation-for="Col44" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col45" class="control-label"></label>
+                            <input asp-for="Col45" value="0" class="form-control" />
+                            <span asp-validation-for="Col45" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col46" class="control-label"></label>
+                            <input asp-for="Col46" value="0" class="form-control" />
+                            <span asp-validation-for="Col46" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col47" class="control-label"></label>
+                            <input asp-for="Col47" value="0" class="form-control" />
+                            <span asp-validation-for="Col47" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col48" class="control-label"></label>
+                            <input asp-for="Col48" value="0" class="form-control" />
+                            <span asp-validation-for="Col48" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col49" class="control-label"></label>
+                            <input asp-for="Col49" value="0" class="form-control" />
+                            <span asp-validation-for="Col49" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col50" class="control-label"></label>
+                            <input asp-for="Col50" value="0" class="form-control" />
+                            <span asp-validation-for="Col50" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col51" class="control-label"></label>
+                            <input asp-for="Col51" value="0" class="form-control" />
+                            <span asp-validation-for="Col51" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col52" class="control-label"></label>
+                            <input asp-for="Col52" value="0" class="form-control" />
+                            <span asp-validation-for="Col52" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col53" class="control-label"></label>
+                            <input asp-for="Col53" value="0" class="form-control" />
+                            <span asp-validation-for="Col53" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col54" class="control-label"></label>
+                            <input asp-for="Col54" value="0" class="form-control" />
+                            <span asp-validation-for="Col54" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col55" class="control-label"></label>
+                            <input asp-for="Col55" value="0" class="form-control" />
+                            <span asp-validation-for="Col55" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col56" class="control-label"></label>
+                            <input asp-for="Col56" value="0" class="form-control" />
+                            <span asp-validation-for="Col56" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col57" class="control-label"></label>
+                            <input asp-for="Col57" value="0" class="form-control" />
+                            <span asp-validation-for="Col57" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col58" class="control-label"></label>
+                            <input asp-for="Col58" value="0" class="form-control" />
+                            <span asp-validation-for="Col58" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col59" class="control-label"></label>
+                            <input asp-for="Col59" value="0" class="form-control" />
+                            <span asp-validation-for="Col59" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Col60" class="control-label"></label>
+                            <input asp-for="Col60" value="0" class="form-control" />
+                            <span asp-validation-for="Col60" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size2XS" class="control-label"></label>
+                            <input asp-for="Size2XS" value="0" class="form-control" />
+                            <span asp-validation-for="Size2XS" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeXS" class="control-label"></label>
+                            <input asp-for="SizeXS" value="0" class="form-control" />
+                            <span asp-validation-for="SizeXS" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeS" class="control-label"></label>
+                            <input asp-for="SizeS" value="0" class="form-control" />
+                            <span asp-validation-for="SizeS" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                         <div class="form-group">
+                            <label asp-for="SizeM" class="control-label"></label>
+                            <input asp-for="SizeM" value="0" class="form-control" />
+                            <span asp-validation-for="SizeM" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeL" class="control-label"></label>
+                            <input asp-for="SizeL" value="0" class="form-control" />
+                            <span asp-validation-for="SizeL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeXL" class="control-label"></label>
+                            <input asp-for="SizeXL" value="0" class="form-control" />
+                            <span asp-validation-for="SizeXL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size2XL" class="control-label"></label>
+                            <input asp-for="Size2XL" value="0" class="form-control" />
+                            <span asp-validation-for="Size2XL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size3XL" class="control-label"></label>
+                            <input asp-for="Size3XL" value="0" class="form-control" />
+                            <span asp-validation-for="Size3XL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeX1" class="control-label"></label>
+                            <input asp-for="SizeX1" value="0" class="form-control" />
+                            <span asp-validation-for="SizeX1" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeX2" class="control-label"></label>
+                            <input asp-for="SizeX2" value="0" class="form-control" />
+                            <span asp-validation-for="SizeX2" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeX3" class="control-label"></label>
+                            <input asp-for="SizeX3" value="0" class="form-control" />
+                            <span asp-validation-for="SizeX3" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="SizeLL" class="control-label"></label>
+                            <input asp-for="SizeLL" value="0" class="form-control" />
+                            <span asp-validation-for="SizeLL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size3L" class="control-label"></label>
+                            <input asp-for="Size3L" value="0" class="form-control" />
+                            <span asp-validation-for="Size3L" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size4L" class="control-label"></label>
+                            <input asp-for="Size4L" value="0" class="form-control" />
+                            <span asp-validation-for="Size4L" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label asp-for="Size5L" class="control-label"></label>
+                            <input asp-for="Size5L" value="0" class="form-control" />
+                            <span asp-validation-for="Size5L" class="text-danger"></span>
+                        </div>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="TotalQuantity" class="control-label"></label>
+                    <input asp-for="TotalQuantity" class="form-control" />
+                    <span asp-validation-for="TotalQuantity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CartonQuantity" class="control-label"></label>
+                    <input asp-for="CartonQuantity" class="form-control" />
+                    <span asp-validation-for="CartonQuantity" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="TotalPieces" class="control-label"></label>
+                    <input asp-for="TotalPieces" class="form-control" />
+                    <span asp-validation-for="TotalPieces" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TotalNetWeight" class="control-label"></label>
+                    <input asp-for="TotalNetWeight" class="form-control" />
+                    <span asp-validation-for="TotalNetWeight" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="TotalGrossWeight" class="control-label"></label>
+                    <input asp-for="TotalGrossWeight" class="form-control" />
+                    <span asp-validation-for="TotalGrossWeight" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dimension" class="control-label"></label>
+                    <input asp-for="Dimension" value="52x36x40" class="form-control" />
+                    <span asp-validation-for="Dimension" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div>
+        <a href='@ViewData["returnURL"]'>Back to List</a>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-</body>
-</html>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
