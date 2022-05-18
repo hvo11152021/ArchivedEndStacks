@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+using LittlePrinter.Data;
+using LittlePrinter.Models;
+using LittlePrinter.Utilities;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using LittlePrinter.Models;
-using LittlePrinter.Data;
-using LittlePrinter.Utilities;
 
 namespace LittlePrinter.Controllers
 {
@@ -393,6 +396,118 @@ namespace LittlePrinter.Controllers
         private bool TagExists(int id)
         {
             return _context.Tags.Any(e => e.ID == id);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        // POST: CartonLabels/InsertFromExcel
+        public async Task<IActionResult> InsertFromExcel(IFormFile theExcel)
+        {
+            //Make sure file is uploaded
+            if (theExcel == null)
+            {
+                TempData["Message"] = "Please select an Excel file to upload. File type must be .csv or .xlsx!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            string uploadMessage = "";
+            int i = 0;//Counter for inserted records
+            int j = 0;//Counter for duplicates
+
+            // If you use EPPlus in a noncommercial context
+            // according to the Polyform Noncommercial license:
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            try
+            {
+                ExcelPackage excel;
+                using (var memoryStream = new MemoryStream())
+                {
+                    await theExcel.CopyToAsync(memoryStream);
+                    excel = new ExcelPackage(memoryStream);
+                }
+                var workSheet = excel.Workbook.Worksheets[0];
+                var start = workSheet.Dimension.Start;
+                var end = workSheet.Dimension.End;
+
+                //Start a new list to hold imported objects
+                List<Tag> cartonLabels = new List<Tag>();
+
+                for (int row = start.Row + 2; row <= end.Row; row++)
+                {
+                    // Row by row...
+                    Tag l = new Tag();
+                    l.CartonNumber = ConvertInput(workSheet.Cells[row, 1].Text);
+                    l.BuyerCartonNumber = ConvertInput(workSheet.Cells[row, 4].Text);
+                    l.StylePPJ = workSheet.Cells[row, 6].Text;
+                    l.Brand = workSheet.Cells[row, 7].Text;
+                    l.Description = workSheet.Cells[row, 8].Text;
+                    l.Fab = workSheet.Cells[row, 9].Text;
+                    l.ColorName = workSheet.Cells[row, 10].Text;
+                    l.Col000 = ConvertInput(workSheet.Cells[row, 11].Text);
+                    l.Col00 = ConvertInput(workSheet.Cells[row, 12].Text);
+
+                    //using reflection to loop through all properties in one object
+                    for (int p = 0; p <= 60; p++)
+                    {
+                        var prop = typeof(Tag).GetProperty($"Col{p}");
+                        prop.SetValue(l, ConvertInput(workSheet.Cells[row, p + 13].Text), null);
+                    }
+
+                    l.Size2XS = ConvertInput(workSheet.Cells[row, 74].Text);
+                    l.SizeXS = ConvertInput(workSheet.Cells[row, 75].Text);
+                    l.SizeS = ConvertInput(workSheet.Cells[row, 76].Text);
+                    l.SizeM = ConvertInput(workSheet.Cells[row, 77].Text);
+                    l.SizeL = ConvertInput(workSheet.Cells[row, 78].Text);
+                    l.SizeXL = ConvertInput(workSheet.Cells[row, 79].Text);
+                    l.Size2XL = ConvertInput(workSheet.Cells[row, 80].Text);
+                    l.Size3XL = ConvertInput(workSheet.Cells[row, 81].Text);
+
+                    l.SizeX = ConvertInput(workSheet.Cells[row, 82].Text);
+                    l.SizeX1 = ConvertInput(workSheet.Cells[row, 83].Text);
+                    l.SizeX2 = ConvertInput(workSheet.Cells[row, 84].Text);
+                    l.SizeX3 = ConvertInput(workSheet.Cells[row, 85].Text);
+                    l.SizeLL = ConvertInput(workSheet.Cells[row, 86].Text);
+                    l.Size3L = ConvertInput(workSheet.Cells[row, 87].Text);
+                    l.Size4L = ConvertInput(workSheet.Cells[row, 88].Text);
+                    l.Size5L = ConvertInput(workSheet.Cells[row, 89].Text);
+
+                    l.TotalQuantity = ConvertInput(workSheet.Cells[row, 90].Text);
+                    l.CartonQuantity = ConvertInput(workSheet.Cells[row, 91].Text);
+                    l.TotalPieces = ConvertInput(workSheet.Cells[row, 92].Text);
+                    l.TotalNetWeight = ConvertDouble(workSheet.Cells[row, 93].Text);
+                    l.TotalGrossWeight = ConvertDouble(workSheet.Cells[row, 94].Text);
+                    l.Dimension = workSheet.Cells[row, 95].Text;
+
+                    if (l.TotalQuantity != 0 &&
+                        l.CartonQuantity != 0 &&
+                        l.TotalPieces != 0 &&
+                        l.TotalNetWeight != 0 &&
+                        l.TotalGrossWeight != 0)
+                        cartonLabels.Add(l);
+
+                }
+                _context.Tags.AddRange(cartonLabels);
+                _context.SaveChanges();
+                TempData["Success"] = "Data successfully uploaded!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                //uploadMessage = ex.GetBaseException().Message;
+                uploadMessage = "Incorrect column placement or missing columns. " +
+                    "Please review the upload format by download the upload guideline on the right. " +
+                    "(Sai vị trí cột hoặc thiếu cột. Vui lòng xem xét hướng dẫn tải lên) " +
+                    ex.GetBaseException().Message;
+                /*"Failed to import data.  Check that file type is .csv or .xlsx!";*/
+            }
+            if (String.IsNullOrEmpty(uploadMessage))
+            {
+                uploadMessage = "Imported " + (i + j).ToString() + " records, with "
+                    + j.ToString() + " rejected as duplicates and " + i.ToString() + " inserted.";
+            }
+            TempData["Message"] = uploadMessage;
+            return RedirectToAction(nameof(Index));
         }
 
         private string ControllerName() => this.ControllerContext.RouteData.Values["controller"].ToString();
