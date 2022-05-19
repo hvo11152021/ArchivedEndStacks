@@ -510,6 +510,232 @@ namespace LittlePrinter.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        // POST: CartonLabels/DownloadLabels
+        public async Task<IActionResult> DownloadLabels()
+        {
+            var labels = await _context.Tags.OrderBy(l => l.BuyerCartonNumber).ToListAsync();
+
+            if (labels.Count == 0)
+            {
+                TempData["Message"] = "Failed to download. Currently there is no record on the page.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            string downloadMessage = "";
+
+            try
+            {
+                var stream = new MemoryStream();
+                //required using OfficeOpenXml;
+                // If you use EPPlus in a noncommercial context
+                // according to the Polyform Noncommercial license:
+                using (var package = new ExcelPackage(stream))
+                {
+                    var workSheet = package.Workbook.Worksheets.Add("Sheet1");
+                    //workSheet.Cells[2,1].LoadFromCollection(list, true);
+                    int startRow = 2;
+
+                    int maxValue = 0;
+                    foreach (var l in labels)
+                    {
+                        if (maxValue < l.BuyerCartonNumber) maxValue = l.BuyerCartonNumber;
+                    }
+
+                    foreach (var l in labels)
+                    {
+                        workSheet.Cells[startRow, 1].Value = "BRAND NAME";
+                        workSheet.Cells[startRow + 1, 1].Value = "STYLE #";
+                        workSheet.Cells[startRow + 3, 1].Value = "COLORS";
+                        workSheet.Cells[startRow + 4, 1].Value = "SIZE";
+                        workSheet.Cells[startRow + 5, 1].Value = "QTY";
+                        workSheet.Cells[startRow + 7, 1].Value = "TOTAL QTY";
+                        workSheet.Cells[startRow + 9, 1].Value = "NET. WT";
+                        workSheet.Cells[startRow + 11, 1].Value = "GROSS WT";
+                        workSheet.Cells[startRow + 13, 1].Value = "DIMS";
+                        workSheet.Cells[startRow + 15, 1].Value = "CARTON #";
+                        workSheet.Cells[startRow + 17, 1].Value = "MADE IN VIETNAM";
+                        workSheet.Cells[startRow + 17, 1].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        workSheet.Cells[startRow + 17, 1, startRow + 17, 15].Merge = true;
+
+                        workSheet.Cells[startRow, 3].Value = ":";
+                        workSheet.Cells[startRow + 1, 3].Value = ":";
+                        workSheet.Cells[startRow + 3, 3].Value = ":";
+                        workSheet.Cells[startRow + 4, 3].Value = ":";
+                        workSheet.Cells[startRow + 7, 3].Value = ":";
+                        workSheet.Cells[startRow + 9, 3].Value = ":";
+                        workSheet.Cells[startRow + 11, 3].Value = ":";
+                        workSheet.Cells[startRow + 13, 3].Value = ":";
+                        workSheet.Cells[startRow + 15, 3].Value = ":";
+
+                        workSheet.Cells[startRow, 4].Value = l.Brand.ToUpper();
+                        workSheet.Cells[startRow + 1, 4].Value = l.StylePPJ.ToString().ToUpper();
+                        workSheet.Cells[startRow + 3, 4].Value = l.ColorName.ToUpper();
+
+                        List<string> names = new List<string>();
+                        List<int> values = new List<int>();
+
+                        if (l.Col000 != 0)
+                        {
+                            names.Add("000");
+                            values.Add(l.Col000);
+                        }
+
+                        if (l.Col00 != 0)
+                        {
+                            names.Add("00");
+                            values.Add(l.Col00);
+                        }
+
+                        //using reflection to loop through all properties in one object
+                        for (int i = 0; i <= 60; i++)
+                        {
+                            var prop = typeof(Tag).GetProperty($"Col{i}");
+                            int objInt = (int)prop.GetValue(l, null);
+                            if (objInt != 0)
+                            {
+                                names.Add($"{i}");
+                                values.Add(objInt);
+                            }
+                        }
+
+                        if (l.Size2XS != 0) names.Add("2XS");
+                        if (l.SizeXS != 0) names.Add("XS");
+                        if (l.SizeS != 0) names.Add("S");
+                        if (l.SizeM != 0) names.Add("M");
+                        if (l.SizeL != 0) names.Add("L");
+                        if (l.SizeXL != 0) names.Add("XL");
+                        if (l.Size2XL != 0) names.Add("2XL");
+                        if (l.Size3XL != 0) names.Add("3XL");
+
+                        if (l.Size2XS != 0) values.Add(l.Size2XS);
+                        if (l.SizeXS != 0) values.Add(l.SizeXS);
+                        if (l.SizeS != 0) values.Add(l.SizeS);
+                        if (l.SizeM != 0) values.Add(l.SizeM);
+                        if (l.SizeL != 0) values.Add(l.SizeL);
+                        if (l.SizeXL != 0) values.Add(l.SizeXL);
+                        if (l.Size2XL != 0) values.Add(l.Size2XL);
+                        if (l.Size3XL != 0) values.Add(l.Size3XL);
+
+                        if (l.SizeX != 0) names.Add("X");
+                        if (l.SizeX1 != 0) names.Add("X1");
+                        if (l.SizeX2 != 0) names.Add("X2");
+                        if (l.SizeX3 != 0) names.Add("X3");
+                        if (l.SizeLL != 0) names.Add("LL");
+                        if (l.Size3L != 0) names.Add("3L");
+                        if (l.Size4L != 0) names.Add("4L");
+                        if (l.Size5L != 0) names.Add("5L");
+
+                        if (l.SizeX != 0) values.Add(l.SizeX);
+                        if (l.SizeX1 != 0) values.Add(l.SizeX1);
+                        if (l.SizeX2 != 0) values.Add(l.SizeX2);
+                        if (l.SizeX3 != 0) values.Add(l.SizeX3);
+                        if (l.SizeLL != 0) values.Add(l.SizeLL);
+                        if (l.Size3L != 0) values.Add(l.Size3L);
+                        if (l.Size4L != 0) values.Add(l.Size4L);
+                        if (l.Size5L != 0) values.Add(l.Size5L);
+
+                        for (int i = 0; i < values.Count(); i++)
+                        {
+                            workSheet.Cells[startRow + 4, i + 4].Value = names.ElementAt(i);
+                            workSheet.Cells[startRow + 4, i + 4].Style.Font.UnderLine = true;
+                            workSheet.Cells[startRow + 5, i + 4].Value = values.ElementAt(i);
+                            workSheet.Cells[startRow + 4, i + 4].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            workSheet.Cells[startRow + 5, i + 4].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        }
+
+                        workSheet.Cells[startRow + 7, 8].Value = l.TotalQuantity.ToString().ToUpper() + " PCS";
+                        workSheet.Cells[startRow + 9, 8].Value = l.TotalNetWeight.ToString().ToUpper() + " KGS";
+                        workSheet.Cells[startRow + 11, 8].Value = l.TotalGrossWeight.ToString().ToUpper() + " KGS";
+
+                        char[] dmsn = l.Dimension.ToUpper().ToCharArray();
+                        workSheet.Cells[startRow + 13, 6].Value = $"{dmsn[0]}{dmsn[1]}CM {dmsn[2]} {dmsn[3]}{dmsn[4]}CM {dmsn[5]} {dmsn[6]}{dmsn[7]}CM";
+
+                        workSheet.Cells[startRow + 15, 6].Value = l.BuyerCartonNumber.ToString().ToUpper();
+                        workSheet.Cells[startRow + 15, 6].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                        workSheet.Cells[startRow + 15, 6, startRow + 15, 8].Merge = true;
+                        workSheet.Cells[startRow + 15, 9].Value = "OF";
+                        workSheet.Cells[startRow + 15, 11].Value = maxValue.ToString();
+
+                        for (int i = 0; i <= 17; i++)
+                        {
+                            workSheet.Cells[startRow + i, 1].Style.Border.Left.Style = ExcelBorderStyle.Medium;
+                        }
+
+                        for (int i = 1; i <= 15; i++)
+                        {
+                            workSheet.Cells[startRow - 1, i].Style.Border.Bottom.Style = ExcelBorderStyle.Medium;
+                        }
+
+                        for (int i = 0; i <= 17; i++)
+                        {
+                            workSheet.Cells[startRow + i, 15].Style.Border.Right.Style = ExcelBorderStyle.Medium;
+                        }
+
+                        for (int i = 1; i <= 15; i++)
+                        {
+                            workSheet.Cells[startRow + 17, i].Style.Border.Bottom.Style = ExcelBorderStyle.Medium;
+                        }
+
+                        startRow += 19;
+                    }
+
+                    workSheet.Cells.Style.Font.Name = "Times New Roman";
+                    workSheet.Cells.Style.Font.Size = 36;
+                    workSheet.Cells.Style.Font.Bold = true;
+
+                    workSheet.Column(1).Width = 18.67;
+                    workSheet.Column(2).Width = 46.67;
+                    workSheet.Column(3).Width = 11.67;
+
+                    for (int i = 4; i <= 15; i++)
+                    {
+                        workSheet.Column(i).Width = 10.67;
+                    }
+
+                    workSheet.Row(1).Height = 41.40;
+                    workSheet.Row(2).Height = 72.60;
+                    workSheet.Row(3).Height = 56.40;
+                    workSheet.Row(4).Height = 21.00;
+                    workSheet.Row(5).Height = 46.80;
+                    workSheet.Row(6).Height = 48.00;
+                    workSheet.Row(7).Height = 66.00;
+
+                    for (int i = 8; i <= 15; i++)
+                    {
+                        workSheet.Row(i).Height = 46.80;
+                    }
+                    workSheet.Row(16).Height = 34.20;
+                    workSheet.Row(17).Height = 46.80;
+                    workSheet.Row(18).Height = 33.00;
+                    workSheet.Row(19).Height = 47.40;
+
+                    workSheet.PrinterSettings.HeaderMargin = 0;
+                    workSheet.PrinterSettings.FooterMargin = 0;
+                    workSheet.PrinterSettings.TopMargin = (double)0.34m;
+                    workSheet.PrinterSettings.LeftMargin = (double)0.3m;
+                    workSheet.PrinterSettings.RightMargin = (double)0.25m;
+                    workSheet.PrinterSettings.BottomMargin = (double)0.25m;
+                    workSheet.PrinterSettings.HorizontalCentered = true;
+                    workSheet.PrinterSettings.PaperSize = ePaperSize.A4;
+                    workSheet.PrinterSettings.Scale = 46;
+
+                    package.Save();
+                }
+                stream.Position = 0;
+                string excelName = $"listToPrint.xlsx";
+
+                return File(stream, "application/octet-stream", excelName);
+            }
+            catch (Exception ex)
+            {
+                downloadMessage = ex.GetBaseException().Message;
+            }
+            TempData["Message"] = downloadMessage;
+            return RedirectToAction(nameof(Index));
+        }
+
         private string ControllerName() => this.ControllerContext.RouteData.Values["controller"].ToString();
 
         private void ViewDataReturnURL()
