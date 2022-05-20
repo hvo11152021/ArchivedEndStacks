@@ -94,8 +94,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Shared\\_PagingNavBar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:46:43.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:46:43.46Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Tags\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:37:29.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:37:29.973Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Tags\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:37:22.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:37:22.211Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Tags\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:36:51.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:36:51.706Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:11:21.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:11:21.35Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:10:09.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:10:09.137Z"
             },
             {
               "$type": "Document",
@@ -170,7 +164,7 @@
               "RelativeDocumentMoniker": "LittlePrinter\\Controllers\\TagsController.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Controllers\\TagsController.cs",
               "RelativeToolTip": "LittlePrinter\\Controllers\\TagsController.cs",
-              "ViewState": "AgIAAI4BAAAAAAAAAAAAAKIBAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAO8BAAAAAAAAAAAAAOYCAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T01:52:22.776Z",
               "EditorCaption": ""
@@ -185,8 +179,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Tags\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:37:26.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:37:26.612Z"
             },
             {
               "$type": "Document",
@@ -198,8 +191,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Shared\\_PageSizeModal.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:46:37.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:46:37.603Z"
             },
             {
               "$type": "Document",
@@ -211,8 +203,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:08:46.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:08:46.581Z"
             },
             {
               "$type": "Document",
@@ -224,8 +215,7 @@
               "RelativeToolTip": "LittlePrinter\\Views\\Tags\\Index.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAADwvwAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T15:08:42.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:08:42.917Z"
             },
             {
               "$type": "Document",
@@ -237,8 +227,7 @@
               "RelativeToolTip": "LittlePrinter\\Startup.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:05:01.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:05:01.968Z"
             },
             {
               "$type": "Document",
@@ -250,8 +239,7 @@
               "RelativeToolTip": "LittlePrinter\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:04:20.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:04:20.886Z"
             },
             {
               "$type": "Document",
@@ -263,8 +251,7 @@
               "RelativeToolTip": "LittlePrinter\\Utilities\\PaginatedList.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T15:00:55.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T15:00:55.898Z"
             },
             {
               "$type": "Document",
@@ -276,8 +263,7 @@
               "RelativeToolTip": "LittlePrinter\\Utilities\\PageSizeHelper.cs",
               "ViewState": "AgIAABAAAAAAAAAAAABBwAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T14:54:32.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T14:54:32.642Z"
             },
             {
               "$type": "Document",
@@ -289,8 +275,7 @@
               "RelativeToolTip": "LittlePrinter\\Utilities\\MaintainURL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T03:53:08.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T03:53:08.928Z"
             },
             {
               "$type": "Document",
@@ -302,8 +287,7 @@
               "RelativeToolTip": "LittlePrinter\\Utilities\\CookieHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T03:09:40.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T03:09:40.054Z"
             },
             {
               "$type": "Document",
@@ -315,8 +299,7 @@
               "RelativeToolTip": "LittlePrinter\\Data\\LittlePrinterContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T02:13:02.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T02:13:02.125Z"
             }
           ]
         }

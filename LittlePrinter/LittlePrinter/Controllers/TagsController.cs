@@ -736,6 +736,36 @@ namespace LittlePrinter.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        // POST: CartonLabels/DeleteAll
+        public async Task<IActionResult> DeleteAll()
+        {
+            var labels = await _context.Tags.ToListAsync();
+
+            if (labels.Count == 0)
+            {
+                TempData["Message"] = "Failed to delete. Currently there is no record on the page.";
+                return RedirectToAction(nameof(Index));
+            }
+            string deleteMessage = "";
+
+            try
+            {
+                int listCount = _context.Tags.ToList().Count();
+                _context.Tags.RemoveRange(_context.Tags.ToList());
+                _context.SaveChanges();
+                TempData["Success"] = $"{listCount} records deleted!";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                deleteMessage = ex.GetBaseException().Message;
+            }
+            TempData["Message"] = deleteMessage;
+            return RedirectToAction(nameof(Index));
+        }
+
         private string ControllerName() => this.ControllerContext.RouteData.Values["controller"].ToString();
 
         private void ViewDataReturnURL()
