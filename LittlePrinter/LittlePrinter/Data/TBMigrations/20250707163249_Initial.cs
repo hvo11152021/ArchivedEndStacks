@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace LittlePrinter.Data.SPMigrations
+namespace LittlePrinter.Data.TBMigrations
 {
     public partial class Initial : Migration
     {
@@ -11,7 +11,7 @@ namespace LittlePrinter.Data.SPMigrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     CartonNumber = table.Column<int>(nullable: false),
                     BuyerCartonNumber = table.Column<int>(nullable: false),
                     StylePPJ = table.Column<string>(nullable: true),

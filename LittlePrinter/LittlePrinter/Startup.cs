@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using LittlePrinter.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using LittlePrinter.Data;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 
 namespace LittlePrinter
 {
@@ -24,10 +24,10 @@ namespace LittlePrinter
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<LittlePrinterContext>(options => options.UseSqlite(Configuration.GetConnectionString("LittlePrinterContext")));
             services.AddControllersWithViews();
-
-            services.AddDbContext<LittlePrinterContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("LittlePrinterContext")));
+            //services.AddDbContext<LittlePrinterContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("LittlePrinterContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
