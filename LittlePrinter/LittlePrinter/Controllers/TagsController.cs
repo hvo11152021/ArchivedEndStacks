@@ -713,10 +713,10 @@ namespace LittlePrinter.Controllers
 
                     workSheet.PrinterSettings.HeaderMargin = 0;
                     workSheet.PrinterSettings.FooterMargin = 0;
-                    workSheet.PrinterSettings.TopMargin = (double)0.34m;
-                    workSheet.PrinterSettings.LeftMargin = (double)0.3m;
-                    workSheet.PrinterSettings.RightMargin = (double)0.25m;
-                    workSheet.PrinterSettings.BottomMargin = (double)0.25m;
+                    workSheet.PrinterSettings.TopMargin = 0.34m;
+                    workSheet.PrinterSettings.LeftMargin = 0.3m;
+                    workSheet.PrinterSettings.RightMargin = 0.25m;
+                    workSheet.PrinterSettings.BottomMargin = 0.25m;
                     workSheet.PrinterSettings.HorizontalCentered = true;
                     workSheet.PrinterSettings.PaperSize = ePaperSize.A4;
                     workSheet.PrinterSettings.Scale = 46;

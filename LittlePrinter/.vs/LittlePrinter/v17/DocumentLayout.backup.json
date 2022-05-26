@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\data\\tbseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\data\\tbseeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|solutionrelative:littleprinter\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9264E2CE-FF10-4E9A-8601-37DD6C0EACFA}|LittlePrinter\\LittlePrinter.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\littleprinter\\littleprinter\\views\\tags\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -98,37 +98,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\appsettings.json",
-              "RelativeDocumentMoniker": "LittlePrinter\\appsettings.json",
-              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\appsettings.json",
-              "RelativeToolTip": "LittlePrinter\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-07T16:40:16.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20250707163249_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
-              "RelativeDocumentMoniker": "LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
-              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
-              "RelativeToolTip": "LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T16:32:50.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TBSeedData.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Data\\TBSeedData.cs",
               "RelativeDocumentMoniker": "LittlePrinter\\Data\\TBSeedData.cs",
@@ -137,6 +111,32 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T16:24:11.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\appsettings.json",
+              "RelativeDocumentMoniker": "LittlePrinter\\appsettings.json",
+              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\appsettings.json",
+              "RelativeToolTip": "LittlePrinter\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-07T16:40:16.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250707163249_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
+              "RelativeDocumentMoniker": "LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
+              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
+              "RelativeToolTip": "LittlePrinter\\Data\\TBMigrations\\20250707163249_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T16:32:50.169Z",
               "EditorCaption": ""
             },
             {
@@ -154,13 +154,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "TagsController.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Controllers\\TagsController.cs",
               "RelativeDocumentMoniker": "LittlePrinter\\Controllers\\TagsController.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Controllers\\TagsController.cs",
               "RelativeToolTip": "LittlePrinter\\Controllers\\TagsController.cs",
-              "ViewState": "AgIAAOcCAAAAAAAAAADwvwADAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAG8BAAAAAAAAAAAAAM4CAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T01:52:22.776Z",
               "EditorCaption": ""
@@ -193,13 +193,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Startup.cs",
               "RelativeDocumentMoniker": "LittlePrinter\\Startup.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Startup.cs",
               "RelativeToolTip": "LittlePrinter\\Startup.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAABBwBUAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T15:05:01.968Z",
               "EditorCaption": ""
@@ -342,7 +342,7 @@
               "RelativeDocumentMoniker": "LittlePrinter\\Utilities\\PageSizeHelper.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\LittlePrinter\\LittlePrinter\\Utilities\\PageSizeHelper.cs",
               "RelativeToolTip": "LittlePrinter\\Utilities\\PageSizeHelper.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAABRwAUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBZwAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-07T14:54:32.642Z",
               "EditorCaption": ""
