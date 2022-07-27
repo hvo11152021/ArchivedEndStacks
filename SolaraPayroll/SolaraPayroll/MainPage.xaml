@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Rectangle HorizontalAlignment="Center" Height="1080" Stroke="Black" VerticalAlignment="Center" Width="1921" Fill="#FFE1E1E1"/>
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1919" Fill="#FF232C32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="SolaraPayroll" VerticalAlignment="Top" FontFamily="Cascadia Code" FontSize="70" Foreground="#FFE06B2F"/>
     </Grid>
 </Page>
