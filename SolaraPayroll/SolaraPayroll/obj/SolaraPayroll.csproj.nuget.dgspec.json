@@ -4,6 +4,82 @@
     "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\SolaraPayroll.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\BusinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\BusinessLogic.csproj",
+        "projectName": "BusinessLogic",
+        "projectPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\Hy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.17763"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.17763": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "uap10.0.17763": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.13, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    },
     "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\SolaraPayroll.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -32,7 +108,11 @@
         },
         "frameworks": {
           "uap10.0.17763": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\BusinessLogic.csproj"
+              }
+            }
           }
         },
         "restoreAuditProperties": {

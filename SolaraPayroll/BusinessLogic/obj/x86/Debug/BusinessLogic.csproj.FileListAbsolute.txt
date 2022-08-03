@@ -1,0 +1,2 @@
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\BusinessLogic\obj\x86\Debug\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\BusinessLogic\obj\x86\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
