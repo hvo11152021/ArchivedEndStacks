@@ -380,5 +380,137 @@ namespace SolaraPayroll
                 await message.ShowAsync();
             }
         }
+
+        private async void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                selectedPerson.HSAlert += HandleNotify;
+                if (selectedPerson is Hourly)
+                {
+                    foreach (Hourly emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Hours = int.Parse(txtHourWorked.Text);
+                        emp.Rate = decimal.Parse(txtHourlyRate.Text);
+                    }
+                }
+                if (selectedPerson is Salary)
+                {
+
+                    foreach (Salary emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Amount = decimal.Parse(txtSalary.Text);
+                    }
+
+                }
+                if (selectedPerson is SoftwareDev)
+                {
+                    foreach (SoftwareDev emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Bi_Weekly = decimal.Parse(txtSalary.Text);
+                    }
+                }
+                if (selectedPerson is SupplyManager)
+                {
+                    foreach (SupplyManager emp in empList.Where(p => p.FirstName == EmpName))
+                    {
+                        emp.FirstName = txtFirst.Text;
+                        emp.LastName = txtLast.Text;
+                        emp.Sin = txtSiN.Text;
+                        emp.BirthDate = dtpInputDOB.Date.Date;
+                        emp.Phone = txtPhone.Text;
+                        emp.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        emp.Email = txtEmail.Text;
+                        emp.Salary = decimal.Parse(txtSalary.Text);
+                    }
+                }
+
+                selectedPerson.HSAlert -= HandleNotify;
+
+                lvEmpList.ItemsSource = null;
+                lvEmpList.ItemsSource = empList;
+
+                cboEmpType.IsEnabled = true;
+                tbxEmpName.IsEnabled = true;
+                dtpkHiredDate.IsEnabled = true;
+                btnCreateNew.IsEnabled = true;
+                lvEmpList.IsEnabled = true;
+
+                txtFirst.IsEnabled = false;
+                txtLast.IsEnabled = false;
+                txtSiN.IsEnabled = false;
+                dtpInputDOB.IsEnabled = false;
+                txtPhone.IsEnabled = false;
+                txtStreet.IsEnabled = false;
+                txtCity.IsEnabled = false;
+                txtProvince.IsEnabled = false;
+                txtZip.IsEnabled = false;
+                txtEmail.IsEnabled = false;
+
+                cboEmployeeType.IsEnabled = false;
+                txtSalary.IsEnabled = false;
+                txtHourWorked.IsEnabled = false;
+                txtHourlyRate.IsEnabled = false;
+                btnUpdate.IsEnabled = false;
+                btnAddNew.IsEnabled = false;
+                btnCancel.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        public async void HandleNotify(object sender, EventArgs args)
+        {
+            var message = new MessageDialog("Update: One or more employee have a salary greater than $215,000");
+            await message.ShowAsync();
+        }
     }
 }
