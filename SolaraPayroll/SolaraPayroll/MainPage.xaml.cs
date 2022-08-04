@@ -326,5 +326,59 @@ namespace SolaraPayroll
                 await message.ShowAsync();
             }
         }
+
+        private async void btnCreateNew_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                cboEmpType.IsEnabled = false;
+                tbxEmpName.IsEnabled = false;
+                dtpkHiredDate.IsEnabled = false;
+                btnCreateNew.IsEnabled = false;
+                lvEmpList.IsEnabled = false;
+
+                txtFirst.IsEnabled = true;
+                txtLast.IsEnabled = true;
+                txtSiN.IsEnabled = true;
+                dtpInputDOB.IsEnabled = true;
+                txtPhone.IsEnabled = true;
+                txtStreet.IsEnabled = true;
+                txtCity.IsEnabled = true;
+                txtProvince.IsEnabled = true;
+                txtZip.IsEnabled = true;
+                txtEmail.IsEnabled = true;
+
+                cboEmployeeType.IsEnabled = true;
+                txtSalary.IsEnabled = true;
+                txtHourWorked.IsEnabled = true;
+                txtHourlyRate.IsEnabled = true;
+                btnUpdate.IsEnabled = true;
+                btnAddNew.IsEnabled = true;
+                btnCancel.IsEnabled = true;
+
+                txtFirst.Text = "Gia Hy";
+                txtLast.Text = "Vo";
+                txtSiN.Text = "123456789";
+                dtpInputDOB.Date = DateTime.Parse("5/18/2001");
+                txtPhone.Text = "0987654321";
+                txtStreet.Text = "3938 Wellington St";
+                txtCity.Text = "Ottawa";
+                txtProvince.Text = "ON";
+                txtZip.Text = "K1A 0A2";
+                txtEmail.Text = "vogiahy@gmail.com";
+
+                txtSalary.Text = "6800";
+                txtHourWorked.Text = String.Empty;
+                txtHourlyRate.Text = String.Empty;
+
+                btnUpdate.Visibility = Visibility.Collapsed;
+                btnAddNew.Visibility = Visibility.Visible;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
     }
 }
