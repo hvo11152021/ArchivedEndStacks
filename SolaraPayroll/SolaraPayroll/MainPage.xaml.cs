@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -82,6 +83,35 @@ namespace SolaraPayroll
                 "Highest Bonus"
             };
 
+        }
+
+        private async void cboEmpType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (cboEmpType.SelectedItem.ToString() == "Hourly")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<Hourly>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Salary")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<Salary>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Software Developer")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<SoftwareDev>();
+                }
+                if (cboEmpType.SelectedItem.ToString() == "Supply Manager")
+                {
+                    lvEmpList.ItemsSource = empList.OfType<SupplyManager>();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
         }
     }
 }
