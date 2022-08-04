@@ -146,5 +146,185 @@ namespace SolaraPayroll
                 await message.ShowAsync();
             }
         }
+
+        private async void lvEmpList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                //when the program run, listview is populated
+                //need the index of that list view = to index of emplist
+                //then output value of object
+                //works when the list is full
+                //but fail when filter options are involved
+                //because index of listview after filter is != to index of emplist
+                //to fix this, need to get index from the content itself inside listview
+                //but this method fail when the list is refresh
+                //need to store the index of the list somewhere before filters are used
+                //would be much easier to use binding, or models
+                //but c# semester 2, students don't know how to create model yet
+                //a combo box instead of a list view would be better
+                //but 2022 requirement change to listview
+                //and for now, it seems listview is not functional without class models
+                //since there's no way to keep track of index of list object if filters exist
+                cboEmpType.IsEnabled = false;
+                tbxEmpName.IsEnabled = false;
+                dtpkHiredDate.IsEnabled = false;
+                btnCreateNew.IsEnabled = false;
+                lvEmpList.IsEnabled = false;
+
+                txtFirst.IsEnabled = true;
+                txtLast.IsEnabled = true;
+                txtSiN.IsEnabled = true;
+                dtpInputDOB.IsEnabled = true;
+                txtPhone.IsEnabled = true;
+                txtStreet.IsEnabled = true;
+                txtCity.IsEnabled = true;
+                txtProvince.IsEnabled = true;
+                txtZip.IsEnabled = true;
+                txtEmail.IsEnabled = true;
+
+                cboEmployeeType.IsEnabled = true;
+                txtSalary.IsEnabled = true;
+                txtHourWorked.IsEnabled = true;
+                txtHourlyRate.IsEnabled = true;
+                btnUpdate.IsEnabled = true;
+                btnAddNew.IsEnabled = true;
+                btnCancel.IsEnabled = true;
+
+                //int eListIndex = -1;
+                //for (int i = 0; i < tempEmpList.Count; i++)
+                //{
+                //    eListIndex = empList.FindIndex(p => p.ToString() == tempEmpList[i]);
+                //}
+
+                //for (int i = 0; i < tempEmpList.Count; i++)
+                //{
+                //    selectedPerson = empList.FirstOrDefault(p => p.FirstName == tempEmpList[i]);
+                //    EmpName = empList.FirstOrDefault(p => p.FirstName == tempEmpList[i]).FirstName;
+                //}
+
+                //txtFirst.Text = selectedPerson.FirstName;
+                //txtLast.Text = selectedPerson.LastName;
+                //txtSiN.Text = selectedPerson.Sin;
+                //dtpInputDOB.Date = selectedPerson.BirthDate;
+                //txtPhone.Text = selectedPerson.Phone;
+                //txtStreet.Text = selectedPerson.Address.Street;
+                //txtCity.Text = selectedPerson.Address.City;
+                //txtProvince.Text = selectedPerson.Address.Province;
+                //txtZip.Text = selectedPerson.Address.PostalCode;
+                //txtEmail.Text = selectedPerson.Email;
+
+                //if (selectedPerson is Hourly)
+                //{
+                //    //set comployee combo box to hourly
+                //    cboEmployeeType.SelectedIndex = 0;
+                //    //disable some text boxes based on the type of employee
+                //    txtSalary.IsEnabled = false;
+                //    txtSalary.IsEnabled = false;
+                //    //declare a new class type and set
+                //    Hourly hourly = (Hourly)selectedPerson;
+                //    //set hourly wages and rates to the appropriate text boxes
+                //    txtHourWorked.Text = hourly.Hours.ToString();
+                //    txtHourlyRate.Text = hourly.Rate.ToString();
+                //}
+                //if (selectedPerson is Salary)
+                //{
+                //    //similar things just like in hourly
+                //    cboEmployeeType.SelectedIndex = 1;
+                //    txtHourWorked.IsEnabled = false;
+                //    txtHourlyRate.IsEnabled = false;
+                //    txtSalary.IsEnabled = true;
+                //    Salary salary = (Salary)selectedPerson;
+                //    txtSalary.Text = salary.Amount.ToString();
+                //}
+                //if (selectedPerson is SoftwareDev)
+                //{
+                //    cboEmployeeType.SelectedIndex = 2;
+                //    txtHourWorked.IsEnabled = false;
+                //    txtHourlyRate.IsEnabled = false;
+                //    txtSalary.IsEnabled = true;
+                //    SoftwareDev salary = (SoftwareDev)selectedPerson;
+                //    txtSalary.Text = salary.Bi_Weekly.ToString();
+                //}
+                //if (selectedPerson is SupplyManager)
+                //{
+                //    cboEmployeeType.SelectedIndex = 3;
+                //    txtHourWorked.IsEnabled = false;
+                //    txtHourlyRate.IsEnabled = false;
+                //    txtSalary.IsEnabled = true;
+                //    SupplyManager salary = (SupplyManager)selectedPerson;
+                //    txtSalary.Text = salary.Salary.ToString();
+                //}
+
+                for (int i = 0; i < lvEmpList.Items.Count; i++)
+                {
+                    //find index of employee in the employee list
+                    if (lvEmpList.SelectedIndex == i)
+                    {
+                        selectedPerson = empList[i];
+                        EmpName = empList[i].FirstName;
+                        //string jsonE = JsonSerializer.Serialize<Employee>(person);
+                        //this.Frame.Navigate(typeof(EditPage), jsonE);
+                        txtFirst.Text = selectedPerson.FirstName;
+                        txtLast.Text = selectedPerson.LastName;
+                        txtSiN.Text = selectedPerson.Sin;
+                        dtpInputDOB.Date = selectedPerson.BirthDate;
+                        txtPhone.Text = selectedPerson.Phone;
+                        txtStreet.Text = selectedPerson.Address.Street;
+                        txtCity.Text = selectedPerson.Address.City;
+                        txtProvince.Text = selectedPerson.Address.Province;
+                        txtZip.Text = selectedPerson.Address.PostalCode;
+                        txtEmail.Text = selectedPerson.Email;
+
+                        if (selectedPerson is Hourly)
+                        {
+                            //set comployee combo box to hourly
+                            cboEmployeeType.SelectedIndex = 0;
+                            //disable some text boxes based on the type of employee
+                            txtSalary.IsEnabled = false;
+                            txtSalary.IsEnabled = false;
+                            //declare a new class type and set
+                            Hourly hourly = (Hourly)selectedPerson;
+                            //set hourly wages and rates to the appropriate text boxes
+                            txtHourWorked.Text = hourly.Hours.ToString();
+                            txtHourlyRate.Text = hourly.Rate.ToString();
+                        }
+                        if (selectedPerson is Salary)
+                        {
+                            //similar things just like in hourly
+                            cboEmployeeType.SelectedIndex = 1;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            Salary salary = (Salary)selectedPerson;
+                            txtSalary.Text = salary.Amount.ToString();
+                        }
+                        if (selectedPerson is SoftwareDev)
+                        {
+                            cboEmployeeType.SelectedIndex = 2;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            SoftwareDev salary = (SoftwareDev)selectedPerson;
+                            txtSalary.Text = salary.Bi_Weekly.ToString();
+                        }
+                        if (selectedPerson is SupplyManager)
+                        {
+                            cboEmployeeType.SelectedIndex = 3;
+                            txtHourWorked.IsEnabled = false;
+                            txtHourlyRate.IsEnabled = false;
+                            txtSalary.IsEnabled = true;
+                            SupplyManager salary = (SupplyManager)selectedPerson;
+                            txtSalary.Text = salary.Salary.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
     }
 }
