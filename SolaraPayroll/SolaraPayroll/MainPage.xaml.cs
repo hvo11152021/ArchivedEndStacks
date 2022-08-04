@@ -113,5 +113,38 @@ namespace SolaraPayroll
                 await message.ShowAsync();
             }
         }
+
+        private async void tbxEmpName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (tbxEmpName.Text != "")
+                {
+                    lvEmpList.ItemsSource = empList.Where(p => p.FirstName == tbxEmpName.Text);
+                }
+                else
+                {
+                    lvEmpList.ItemsSource = empList;
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void dtpkHiredDate_SelectedDateChanged(DatePicker sender, DatePickerSelectedValueChangedEventArgs args)
+        {
+            try
+            {
+                lvEmpList.ItemsSource = empList.Where(p => p.HireDate.Date.Date == dtpkHiredDate.Date.Date);
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
     }
 }

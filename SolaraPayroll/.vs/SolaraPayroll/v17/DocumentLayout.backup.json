@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|solutionrelative:solarapayroll\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\solarapayroll\\solarapayroll\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\solarapayroll\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|solutionrelative:solarapayroll\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "SolaraPayroll\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\MainPage.xaml.cs",
               "RelativeToolTip": "SolaraPayroll\\MainPage.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwFQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAiwHEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T17:57:57.336Z",
               "EditorCaption": ""
@@ -74,8 +74,7 @@
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\MainPage.xaml",
               "RelativeToolTip": "SolaraPayroll\\MainPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-09T16:45:35.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-09T16:45:35.374Z"
             },
             {
               "$type": "Document",
