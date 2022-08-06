@@ -507,6 +507,123 @@ namespace SolaraPayroll
             }
         }
 
+        private async void btnAddNew_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (cboEmployeeType.SelectedIndex < 0)
+                {
+                    throw new Exception("Please pick a type of employee.");
+                }
+                switch (cboEmployeeType.SelectedIndex)
+                {
+                    case 0:
+                        Hourly h = new Hourly(txtSiN.Text);
+                        h.FirstName = txtFirst.Text;
+                        h.LastName = txtLast.Text;
+                        h.BirthDate = dtpInputDOB.Date.Date;
+                        h.Phone = txtPhone.Text;
+                        h.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        h.Email = txtEmail.Text;
+                        h.Hours = int.Parse(txtHourWorked.Text);
+                        h.Rate = decimal.Parse(txtHourlyRate.Text);
+                        empList.Add(h);
+                        break;
+                    case 1:
+                        Salary s = new Salary(txtSiN.Text);
+                        s.FirstName = txtFirst.Text;
+                        s.LastName = txtLast.Text;
+                        s.BirthDate = dtpInputDOB.Date.Date;
+                        s.Phone = txtPhone.Text;
+                        s.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        s.Email = txtEmail.Text;
+                        s.Amount = decimal.Parse(txtSalary.Text);
+                        empList.Add(s);
+                        break;
+                    case 2:
+                        SoftwareDev eng = new SoftwareDev(txtSiN.Text, decimal.Parse(txtSalary.Text));
+                        eng.FirstName = txtFirst.Text;
+                        eng.LastName = txtLast.Text;
+                        eng.BirthDate = dtpInputDOB.Date.Date;
+                        eng.Phone = txtPhone.Text;
+                        eng.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        eng.Email = txtEmail.Text;
+                        empList.Add(eng);
+                        break;
+                    case 3:
+                        SupplyManager g = new SupplyManager(txtSiN.Text, decimal.Parse(txtSalary.Text));
+                        g.FirstName = txtFirst.Text;
+                        g.LastName = txtLast.Text;
+                        g.BirthDate = dtpInputDOB.Date.Date;
+                        g.Phone = txtPhone.Text;
+                        g.Address = new Address
+                        {
+                            Street = txtStreet.Text,
+                            City = txtCity.Text,
+                            Province = txtProvince.Text,
+                            PostalCode = txtZip.Text
+                        };
+                        g.Email = txtEmail.Text;
+                        empList.Add(g);
+                        break;
+                }
+
+                lvEmpList.ItemsSource = null;
+                lvEmpList.ItemsSource = empList;
+
+                btnUpdate.Visibility = Visibility.Visible;
+                btnAddNew.Visibility = Visibility.Collapsed;
+
+                cboEmpType.IsEnabled = true;
+                tbxEmpName.IsEnabled = true;
+                dtpkHiredDate.IsEnabled = true;
+                btnCreateNew.IsEnabled = true;
+                lvEmpList.IsEnabled = true;
+
+                txtFirst.IsEnabled = false;
+                txtLast.IsEnabled = false;
+                txtSiN.IsEnabled = false;
+                dtpInputDOB.IsEnabled = false;
+                txtPhone.IsEnabled = false;
+                txtStreet.IsEnabled = false;
+                txtCity.IsEnabled = false;
+                txtProvince.IsEnabled = false;
+                txtZip.IsEnabled = false;
+                txtEmail.IsEnabled = false;
+
+                cboEmployeeType.IsEnabled = false;
+                txtSalary.IsEnabled = false;
+                txtHourWorked.IsEnabled = false;
+                txtHourlyRate.IsEnabled = false;
+                btnUpdate.IsEnabled = false;
+                btnAddNew.IsEnabled = false;
+                btnCancel.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
         public async void HandleNotify(object sender, EventArgs args)
         {
             var message = new MessageDialog("Update: One or more employee have a salary greater than $215,000");
