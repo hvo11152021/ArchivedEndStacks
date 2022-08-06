@@ -624,6 +624,82 @@ namespace SolaraPayroll
             }
         }
 
+        private async void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                lvEmpList.SelectedIndex = -1;
+
+                cboEmpType.IsEnabled = true;
+                tbxEmpName.IsEnabled = true;
+                dtpkHiredDate.IsEnabled = true;
+                btnCreateNew.IsEnabled = true;
+                lvEmpList.IsEnabled = true;
+
+                txtFirst.IsEnabled = false;
+                txtLast.IsEnabled = false;
+                txtSiN.IsEnabled = false;
+                dtpInputDOB.IsEnabled = false;
+                txtPhone.IsEnabled = false;
+                txtStreet.IsEnabled = false;
+                txtCity.IsEnabled = false;
+                txtProvince.IsEnabled = false;
+                txtZip.IsEnabled = false;
+                txtEmail.IsEnabled = false;
+
+                cboEmployeeType.IsEnabled = false;
+                txtSalary.IsEnabled = false;
+                txtHourWorked.IsEnabled = false;
+                txtHourlyRate.IsEnabled = false;
+                btnUpdate.IsEnabled = false;
+                btnAddNew.IsEnabled = false;
+                btnCancel.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
+        private async void cboEmployeeType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                //disable text boxes based on the selected employee type
+                switch (cboEmployeeType.SelectedIndex)
+                {
+                    case 0:
+                        txtHourWorked.IsEnabled = true;
+                        txtHourlyRate.IsEnabled = true;
+                        txtSalary.IsEnabled = false;
+                        break;
+                    case 1:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    case 2:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    case 3:
+                        txtHourWorked.IsEnabled = false;
+                        txtHourlyRate.IsEnabled = false;
+                        txtSalary.IsEnabled = true;
+                        break;
+                    default:
+                        throw new Exception("Please pick a type of employee.");
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
         public async void HandleNotify(object sender, EventArgs args)
         {
             var message = new MessageDialog("Update: One or more employee have a salary greater than $215,000");
