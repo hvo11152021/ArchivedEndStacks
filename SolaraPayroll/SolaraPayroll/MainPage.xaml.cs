@@ -700,6 +700,41 @@ namespace SolaraPayroll
             }
         }
 
+        private async void btnPRSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                btnNewpayroll.IsEnabled = true;
+                dtpkPayDate.IsEnabled = false;
+                btnPRSubmit.IsEnabled = false;
+
+                IEnumerable<string> lst = lvStatements.SelectedItems.Cast<String>();
+                foreach (string item in lst)
+                {
+                    foreach (Employee em in empList)
+                    {
+                        if (item.Contains(em.FirstName))
+                        {
+                            payrollList.Add(em);
+                        }
+                    }
+                }
+
+                var empObject = new CalculatePayroll<Employee>(dtpkPayDate.Date.Date, payrollList);
+
+                prOutput.Add(empObject.TotalAll);
+
+                lvStatements.ItemsSource = prOutput;
+
+                lvStatements.SelectionMode = ListViewSelectionMode.Single;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
         public async void HandleNotify(object sender, EventArgs args)
         {
             var message = new MessageDialog("Update: One or more employee have a salary greater than $215,000");

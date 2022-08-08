@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\solarapayroll\\solarapayroll\\calculatepayroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|solutionrelative:solarapayroll\\calculatepayroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|c:\\users\\hy\\documents\\github\\archivedendstacks\\solarapayroll\\solarapayroll\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B66525EC-75E4-47BC-8383-ADCFD45758AA}|SolaraPayroll\\SolaraPayroll.csproj|solutionrelative:solarapayroll\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,19 +59,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CalculatePayroll.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\CalculatePayroll.cs",
+              "RelativeDocumentMoniker": "SolaraPayroll\\CalculatePayroll.cs",
+              "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\CalculatePayroll.cs",
+              "RelativeToolTip": "SolaraPayroll\\CalculatePayroll.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:54:17.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "SolaraPayroll\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\MainPage.xaml.cs",
               "RelativeToolTip": "SolaraPayroll\\MainPage.xaml.cs",
-              "ViewState": "AgIAAIICAAAAAAAAAAAiwJgCAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAJoCAAAAAAAAAAAiwJgCAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T17:57:57.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\SolaraPayroll\\MainPage.xaml",
               "RelativeDocumentMoniker": "SolaraPayroll\\MainPage.xaml",
@@ -78,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SupplyManager.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\SupplyManager.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\SupplyManager.cs",
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SoftwareDev.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\SoftwareDev.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\SoftwareDev.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Salary.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\Salary.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Salary.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IDeduction.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\IDeduction.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\IDeduction.cs",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Hourly.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\Hourly.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Hourly.cs",
@@ -138,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\Employee.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Employee.cs",
@@ -150,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Data.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\Data.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Data.cs",
@@ -162,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\Hy\\Documents\\GitHub\\ArchivedEndStacks\\SolaraPayroll\\BusinessLogic\\Address.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Address.cs",
