@@ -1,1 +1,2 @@
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\BusinessLogic\BusinessLogic.csproj;x86
 C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\SolaraPayroll.csproj;x86

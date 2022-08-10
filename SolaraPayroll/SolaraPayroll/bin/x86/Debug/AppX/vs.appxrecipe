@@ -30,17 +30,21 @@
     <AppXManifest Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-07-09T17:17:45.848</Modified>
+      <Modified>2025-07-09T20:08:43.949</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\SolaraPayroll.exe">
       <PackagePath>entrypoint\SolaraPayroll.exe</PackagePath>
-      <Modified>2025-07-09T17:17:45.045</Modified>
+      <Modified>2025-07-09T20:08:42.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-11T03:24:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\BusinessLogic\bin\x86\Debug\BusinessLogic.dll">
+      <PackagePath>BusinessLogic.dll</PackagePath>
+      <Modified>2025-07-09T20:07:38.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -86,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\SolaraPayroll.xr.xml">
       <PackagePath>SolaraPayroll.xr.xml</PackagePath>
-      <Modified>2025-07-09T17:17:44.938</Modified>
+      <Modified>2025-07-09T20:07:42.130</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-07-09T17:17:44.963</Modified>
+      <Modified>2025-07-09T20:08:42.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-07-09T17:17:44.963</Modified>
+      <Modified>2025-07-09T20:08:42.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +106,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-07-09T16:45:24.588</Modified>
+      <Modified>2025-07-09T20:08:43.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\Core\SolaraPayroll.exe">
       <PackagePath>SolaraPayroll.exe</PackagePath>
-      <Modified>2025-07-09T17:17:45.843</Modified>
+      <Modified>2025-07-09T20:08:43.945</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

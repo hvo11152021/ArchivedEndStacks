@@ -700,6 +700,26 @@ namespace SolaraPayroll
             }
         }
 
+        private async void btnNewpayroll_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                btnNewpayroll.IsEnabled = false;
+                dtpkPayDate.IsEnabled = true;
+                btnPRSubmit.IsEnabled = true;
+                var empObject = new CalculatePayroll<Employee>(DateTime.Now, empList);
+                List<string> prEmpList = new List<string>();
+                prEmpList = empObject.ProcessPayRoll();
+                lvStatements.ItemsSource = prEmpList;
+                lvStatements.SelectionMode = ListViewSelectionMode.Multiple;
+            }
+            catch (Exception ex)
+            {
+                var message = new MessageDialog(ex.Message);
+                await message.ShowAsync();
+            }
+        }
+
         private async void btnPRSubmit_Click(object sender, RoutedEventArgs e)
         {
             try

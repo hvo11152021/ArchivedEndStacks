@@ -43,3 +43,7 @@ C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\obj\x
 C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424995200000000.json
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\BusinessLogic.dll
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\BusinessLogic.pdb
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\BusinessLogic.pri
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\obj\x86\Debug\BusinessLogic.pri.xml
