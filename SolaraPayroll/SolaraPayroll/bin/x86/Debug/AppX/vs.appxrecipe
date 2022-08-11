@@ -56,27 +56,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2024-11-01T20:31:47.409</Modified>
+      <Modified>2025-07-08T21:49:39.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-01T20:31:47.412</Modified>
+      <Modified>2025-07-08T21:49:39.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-01T20:31:47.412</Modified>
+      <Modified>2025-07-08T21:49:39.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-01T20:31:47.413</Modified>
+      <Modified>2025-07-08T21:49:39.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-01T20:31:47.414</Modified>
+      <Modified>2025-07-08T21:49:39.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -86,7 +86,7 @@
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-01T20:31:47.415</Modified>
+      <Modified>2025-07-08T21:49:39.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\SolaraPayroll\SolaraPayroll\bin\x86\Debug\SolaraPayroll.xr.xml">
       <PackagePath>SolaraPayroll.xr.xml</PackagePath>
