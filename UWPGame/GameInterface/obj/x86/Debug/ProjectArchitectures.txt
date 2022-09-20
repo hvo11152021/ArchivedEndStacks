@@ -1,0 +1,2 @@
+C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\GameInterface.csproj;x86
+C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameLibrary\GameLibrary.csproj;x86

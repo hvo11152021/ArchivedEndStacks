@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="GameInterface.MenuState"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameInterface"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1083">
+
+    <Grid Margin="0,0,0,0" Width="1923">
+        <Image Source="Assets/menu_background.png"/>
+        <Button x:Name="btnStart" Content="Start" Margin="0,540,0,0" VerticalAlignment="Top" Foreground="White" Height="89" Width="176" FontSize="48" HorizontalAlignment="Center" Click="btnStart_Click" CornerRadius="20" FontFamily="Cascadia Code SemiBold"/>
+
+    </Grid>
+</Page>
