@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>9762facd-5d38-4b8e-b1f9-c18608f911c1</PackageIdentityName>
     <PackageIdentityPublisher>CN=melis</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>7338A9A8D9A0E6052977120C19BF151013C4E02691BEDFB6A669515CF910592A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9762facd-5d38-4b8e-b1f9-c18608f911c1_1.0.0.0_x86__3xc9w9vd514j8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9762facd-5d38-4b8e-b1f9-c18608f911c1_3xc9w9vd514j8!App</RegisteredUserModeAppID>
@@ -27,350 +27,354 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-07-09T20:56:58.097</Modified>
+      <Modified>2025-07-09T21:47:27.114</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\GameInterface.exe">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\GameInterface.exe">
       <PackagePath>entrypoint\GameInterface.exe</PackagePath>
-      <Modified>2025-07-09T20:56:56.655</Modified>
+      <Modified>2025-07-09T21:47:25.698</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Hy\.nuget\packages\newtonsoft.json\13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2021-03-17T20:03:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Hy\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T01:15:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameLibrary\bin\x86\Debug\GameLibrary.dll">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameLibrary\bin\x86\Debug\GameLibrary.dll">
       <PackagePath>GameLibrary.dll</PackagePath>
-      <Modified>2025-07-09T20:56:52.660</Modified>
+      <Modified>2025-07-09T21:47:21.302</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T09:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\asteroid.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\asteroid.png">
       <PackagePath>Assets\asteroid.png</PackagePath>
       <Modified>2022-09-28T01:54:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\explosion.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\explosion.png">
       <PackagePath>Assets\explosion.png</PackagePath>
       <Modified>2022-09-27T13:00:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\menu_background.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\menu_background.png">
       <PackagePath>Assets\menu_background.png</PackagePath>
       <Modified>2022-09-28T02:41:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\spaceship.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\spaceship.png">
       <PackagePath>Assets\spaceship.png</PackagePath>
       <Modified>2022-09-27T01:41:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\dot.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\dot.png">
       <PackagePath>Assets\dot.png</PackagePath>
       <Modified>2022-09-12T16:57:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\enemy.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\enemy.png">
       <PackagePath>Assets\enemy.png</PackagePath>
       <Modified>2022-07-10T06:32:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2020-11-12T17:58:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\player.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\player.png">
       <PackagePath>Assets\player.png</PackagePath>
       <Modified>2022-07-10T06:29:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\space_burger.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\space_burger.png">
       <PackagePath>Assets\space_burger.png</PackagePath>
       <Modified>2022-09-28T03:15:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square150x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square150x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\StoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\StoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-09-28T01:53:48.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Assets\game_background.jpeg">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Assets\game_background.jpeg">
       <PackagePath>Assets\game_background.jpeg</PackagePath>
       <Modified>2022-10-03T01:41:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-07-10T05:24:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\GameInterface.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\GameInterface.xr.xml">
       <PackagePath>GameInterface.xr.xml</PackagePath>
-      <Modified>2022-10-03T03:16:40.000</Modified>
+      <Modified>2022-10-15T04:27:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-07-09T20:56:56.568</Modified>
+      <Modified>2025-07-09T21:47:25.600</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-07-09T20:56:56.568</Modified>
+      <Modified>2025-07-09T21:47:25.600</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\MenuState.xbf">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\MenuState.xbf">
       <PackagePath>MenuState.xbf</PackagePath>
-      <Modified>2025-07-09T20:56:56.568</Modified>
+      <Modified>2025-07-09T21:47:25.600</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T07:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-07-09T20:56:57.067</Modified>
+      <Modified>2025-07-09T21:47:26.192</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1AUpdated\UWPGame\GameInterface\bin\x86\Debug\Core\GameInterface.exe">
+    <AppxPackagedFile Include="C:\Users\Hy\Desktop\HyVo_Lab1B\UWPGame\GameInterface\bin\x86\Debug\Core\GameInterface.exe">
       <PackagePath>GameInterface.exe</PackagePath>
-      <Modified>2025-07-09T20:56:58.093</Modified>
+      <Modified>2025-07-09T21:47:27.110</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

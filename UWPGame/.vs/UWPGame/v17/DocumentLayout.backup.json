@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\",
+  "WorkspaceRootPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|c:\\users\\hy\\desktop\\hyvo_lab1aupdated\\uwpgame\\gameinterface\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\gameinterface\\menustate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\menustate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\gameinterface\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\gameinterface\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\gameinterface\\menustate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|c:\\users\\hy\\desktop\\hyvo_lab1b\\uwpgame\\gameinterface\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\gameinterface\\menustate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\menustate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\gameinterface\\menustate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C86B4D6-BBB8-40C6-A4E1-327D30FEAAA4}|GameInterface\\GameInterface.csproj|solutionrelative:gameinterface\\menustate.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,54 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "GameInterface\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MainPage.xaml.cs",
               "RelativeToolTip": "GameInterface\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T20:55:41.086Z",
+              "WhenOpened": "2025-07-09T21:47:08.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MainPage.xaml",
               "RelativeDocumentMoniker": "GameInterface\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MainPage.xaml",
               "RelativeToolTip": "GameInterface\\MainPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-09T20:55:41.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuState.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MenuState.xaml.cs",
-              "RelativeDocumentMoniker": "GameInterface\\MenuState.xaml.cs",
-              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MenuState.xaml.cs",
-              "RelativeToolTip": "GameInterface\\MenuState.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAZAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVDhP7ZO9ixNRFMXPm52XTD6JZjdkkllJshpkWNbFwiK4wlSLgiFgq4iVrZ3bhYCFf4BiL2thZRyIECysnMbGYg0aO3FmnjFEyZpJcF5eLMwMwrII1v7gNvdcDudyuQRL7j072FbkSLeYiUpUIteyP9ctwyA80I\u002BD4GZ3GwCunstWL5RSj16\u002B\u002B542qulX\u002BonDBy\u002BePPzkeR4AoFAooNFocADvDcMIjWXMyR0AeN0fn/z2g8c/ME/eWKMXz68tTpXL5annefB9HwAwHA7HqqruWZb1tlarTX8nuN7NAcDdK8XN0mrs6WPry\u002BrtS3nsnI5hPjuEEAKMMZimidlsJur1\u002BsdkMnnL9/03hmFwCfu7A\u002BzvDvJpOuJ8LvYur2OnmkScAolEAqlUCvF4HIvFAqPRSDJN84zruvcBnAUAKdilRB1sKANsFWTEVgSEEIEESilyuRxUVYWiKJJlWel2uy0DwEowlM9m8l/dzze2NvWELIdtAEAkEoGmadB1HZVKBf1\u002Bn9m2/bzX67EwgeM4cBwHnB\u002B9XJCgWCxCVVVQSkMtNPhX/hv8YUApBSEEjDHYtn1sMcbAOQ8vIQcGiqJMJUk66HQ6WUJI0D6CEAKTyaSvKMryF5Y0m03Zdd2M53l/XSsajXJN08atVov/An2EwKjyg7dMAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-07-09T20:55:41.17Z"
+              "WhenOpened": "2025-07-09T21:47:08.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MenuState.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MenuState.xaml.cs",
+              "RelativeDocumentMoniker": "GameInterface\\MenuState.xaml.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MenuState.xaml.cs",
+              "RelativeToolTip": "GameInterface\\MenuState.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVDhP7ZO9ixNRFMXPm52XTD6JZjdkkllJshpkWNbFwiK4wlSLgiFgq4iVrZ3bhYCFf4BiL2thZRyIECysnMbGYg0aO3FmnjFEyZpJcF5eLMwMwrII1v7gNvdcDudyuQRL7j072FbkSLeYiUpUIteyP9ctwyA80I\u002BD4GZ3GwCunstWL5RSj16\u002B\u002B542qulX\u002BonDBy\u002BePPzkeR4AoFAooNFocADvDcMIjWXMyR0AeN0fn/z2g8c/ME/eWKMXz68tTpXL5annefB9HwAwHA7HqqruWZb1tlarTX8nuN7NAcDdK8XN0mrs6WPry\u002BrtS3nsnI5hPjuEEAKMMZimidlsJur1\u002BsdkMnnL9/03hmFwCfu7A\u002BzvDvJpOuJ8LvYur2OnmkScAolEAqlUCvF4HIvFAqPRSDJN84zruvcBnAUAKdilRB1sKANsFWTEVgSEEIEESilyuRxUVYWiKJJlWel2uy0DwEowlM9m8l/dzze2NvWELIdtAEAkEoGmadB1HZVKBf1\u002Bn9m2/bzX67EwgeM4cBwHnB\u002B9XJCgWCxCVVVQSkMtNPhX/hv8YUApBSEEjDHYtn1sMcbAOQ8vIQcGiqJMJUk66HQ6WUJI0D6CEAKTyaSvKMryF5Y0m03Zdd2M53l/XSsajXJN08atVov/An2EwKjyg7dMAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-07-09T21:47:08.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MenuState.xaml",
-              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MenuState.xaml",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MenuState.xaml",
               "RelativeDocumentMoniker": "GameInterface\\MenuState.xaml",
-              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\MenuState.xaml",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\MenuState.xaml",
               "RelativeToolTip": "GameInterface\\MenuState.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-09T20:55:41.171Z"
+              "WhenOpened": "2025-07-09T21:47:08.533Z"
             }
           ]
         }

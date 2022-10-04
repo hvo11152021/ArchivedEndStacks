@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\GameInterface.csproj": {}
+    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\GameInterface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\GameInterface.csproj": {
+    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\GameInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\GameInterface.csproj",
+        "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\GameInterface.csproj",
         "projectName": "GameInterface",
-        "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\GameInterface.csproj",
+        "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\GameInterface.csproj",
         "packagesPath": "C:\\Users\\Hy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameInterface\\obj\\",
+        "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameInterface\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -33,8 +33,8 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj": {
-                "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj"
+              "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj": {
+                "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj"
               }
             }
           }
@@ -51,6 +51,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -84,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj": {
+    "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj",
         "projectName": "GameLibrary",
-        "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj",
+        "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj",
         "packagesPath": "C:\\Users\\Hy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

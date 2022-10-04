@@ -11,6 +11,10 @@
     <Grid Margin="0,0,0,0" Width="1923">
         <Image Source="Assets/menu_background.png"/>
         <Button x:Name="btnStart" Content="Start" Margin="0,540,0,0" VerticalAlignment="Top" Foreground="White" Height="89" Width="176" FontSize="48" HorizontalAlignment="Center" Click="btnStart_Click" CornerRadius="20" FontFamily="Cascadia Code SemiBold"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Center" Margin="0,540,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="300" FontFamily="Cascadia Code SemiLight" FontSize="18"/>
+        <Button x:Name="btnProceed" Content="Proceed" Margin="0,608,0,0" VerticalAlignment="Top" Width="176" Foreground="White" HorizontalAlignment="Center" FontFamily="Cascadia Code SemiLight" FontSize="18" Click="btnProceed_Click"/>
+        <TextBlock x:Name="lblGuide" HorizontalAlignment="Center" Margin="0,505,0,0" TextWrapping="Wrap" Text="Enter your user name:" VerticalAlignment="Top" Width="300" Foreground="White" FontFamily="Cascadia Code SemiLight" FontSize="18"/>
+        <Button x:Name="btnExit" Content="Exit" Margin="0,648,0,0" VerticalAlignment="Top" Width="176" Foreground="White" HorizontalAlignment="Center" FontFamily="Cascadia Code SemiLight" CornerRadius="20" FontSize="18" Click="btnExit_Click"/>
 
     </Grid>
 </Page>

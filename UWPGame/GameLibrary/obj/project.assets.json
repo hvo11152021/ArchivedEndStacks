@@ -10254,11 +10254,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj",
       "projectName": "GameLibrary",
-      "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\GameLibrary.csproj",
+      "projectPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\GameLibrary.csproj",
       "packagesPath": "C:\\Users\\Hy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1AUpdated\\UWPGame\\GameLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab1B\\UWPGame\\GameLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

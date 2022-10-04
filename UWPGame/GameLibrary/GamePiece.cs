@@ -3,14 +3,16 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.System;
 using System.Numerics;
+using Windows.ApplicationModel.Background;
+using System;
 
-//PROG1621 Lab 1A - Hy Vo
+//PROG1621 Lab 1B - Hy Vo
 
 namespace GameLibrary
 {
-    public class GamePiece
+    public class GamePiece : IEquatable<GamePiece>
     {
-        private Thickness objectMargins;            //default codes...
+        public Thickness objectMargins;            //default codes...
         private Image onScreen;
 
         private string name;
@@ -54,11 +56,32 @@ namespace GameLibrary
                 case VirtualKey.Right:
                     objectMargins.Left += 25;
                     break;
+                case VirtualKey.Space:
+                    objectMargins.Left += 25;
+                    break;
                 default:
                     return false;
             }
             onScreen.Margin = objectMargins;
             return true;
+        }
+
+        public bool Fly(VirtualKey path)
+        {
+            if (path is VirtualKey.Space)
+            {
+                for (int i = 0; i < 10; i++)        //spawn bullets a few hundred pixels
+                {                                   //in front of the ship
+                    objectMargins.Left += 25;
+                }
+            }
+            onScreen.Margin = objectMargins;
+            return true;
+        }
+
+        public bool Equals(GamePiece other)
+        {
+            return this.Location == other.Location;         //set location of a game piece equals to the other
         }
     }
 }

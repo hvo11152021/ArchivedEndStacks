@@ -8,13 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Light" Height="1083">
 
-    <Grid x:Name="gridMain" Margin="0,0,0,0" Width="1923">
+    <Grid x:Name="gridMain" Margin="0,0,0,0" Width="1920">
         <Image Source="Assets/game_background.jpeg"/>
-        <StackPanel Margin="0,0,1473,933">
+        <StackPanel Margin="0,0,1473,861">
             <TextBlock x:Name="txtScoreBoard" TextWrapping="Wrap" Text="" FontFamily="Cascadia Code SemiBold" FontSize="20" Foreground="White" />
         </StackPanel>
         <StackPanel Margin="450,29,1036,933">
             <TextBlock x:Name="txtGoals" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FocusVisualPrimaryBrush="White" Foreground="White" FontFamily="Cascadia Code SemiBold" FontSize="20" />
         </StackPanel>
+        <Rectangle x:Name="recEndMenu" HorizontalAlignment="Left" Height="117" Stroke="Black" VerticalAlignment="Center" Width="365" Fill="White" RadiusX="20" RadiusY="20" Margin="783,0,0,0"/>
+        <TextBlock x:Name="txtReplayQuestion" HorizontalAlignment="Left" Margin="868,501,0,0" TextWrapping="Wrap" Text="Do you wish to replay?" VerticalAlignment="Top" FontFamily="Cascadia Mono SemiBold" FontSize="18"/>
+        <Button x:Name="btnYes" Content="Yes" Margin="805,541,0,0" VerticalAlignment="Top" Width="145" Foreground="White" FontFamily="Cascadia Code SemiLight" CornerRadius="20" FontSize="18" Click="btnYes_Click" Background="#FF00042A"/>
+        <Button x:Name="btnNo" Content="No" Margin="986,541,0,0" VerticalAlignment="Top" Width="145" Foreground="White" FontFamily="Cascadia Code SemiLight" CornerRadius="20" FontSize="18" Click="btnNo_Click" Background="#FF00042A"/>
+        <!--<TextBlock x:Name="txtDebug" HorizontalAlignment="Left" Margin="321,352,0,0" TextWrapping="Wrap" Text="Co-ordinates" VerticalAlignment="Top" Foreground="White"/>-->
     </Grid>
 </Page>
