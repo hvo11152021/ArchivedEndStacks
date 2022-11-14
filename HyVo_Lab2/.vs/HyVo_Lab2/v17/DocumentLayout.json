@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\hyvo_lab2\\queueenumerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\queueenumerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\hyvo_lab2\\priorityqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\priorityqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\hyvo_lab2\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\hyvo_lab2\\timeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\timeline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|c:\\users\\hy\\desktop\\hyvo_lab2\\hyvo_lab2\\hyvo_lab2\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\hyvo_lab2\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6504888-8D43-4C3E-88FD-2D3B5350443B}|HyVo_Lab2\\HyVo_Lab2.csproj|solutionrelative:hyvo_lab2\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QueueEnumerator.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\QueueEnumerator.cs",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\QueueEnumerator.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\QueueEnumerator.cs",
+              "RelativeToolTip": "HyVo_Lab2\\QueueEnumerator.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:00:48.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PriorityQueue.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\PriorityQueue.cs",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\PriorityQueue.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\PriorityQueue.cs",
+              "RelativeToolTip": "HyVo_Lab2\\PriorityQueue.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAAAHAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:00:48.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Goal.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\Goal.cs",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\Goal.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\Goal.cs",
+              "RelativeToolTip": "HyVo_Lab2\\Goal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:00:48.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Timeline.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\Timeline.cs",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\Timeline.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\Timeline.cs",
+              "RelativeToolTip": "HyVo_Lab2\\Timeline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:00:48.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\MainPage.xaml.cs",
+              "RelativeToolTip": "HyVo_Lab2\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAARAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHtSURBVDhP7ZO9ixNRFMXPm52XTD6JZjdkkllJshpkWNbFwiK4wlSLgiFgq4iVrZ3bhYCFf4BiL2thZRyIECysnMbGYg0aO3FmnjFEyZpJcF5eLMwMwrII1v7gNvdcDudyuQRL7j072FbkSLeYiUpUIteyP9ctwyA80I\u002BD4GZ3GwCunstWL5RSj16\u002B\u002B542qulX\u002BonDBy\u002BePPzkeR4AoFAooNFocADvDcMIjWXMyR0AeN0fn/z2g8c/ME/eWKMXz68tTpXL5annefB9HwAwHA7HqqruWZb1tlarTX8nuN7NAcDdK8XN0mrs6WPry\u002BrtS3nsnI5hPjuEEAKMMZimidlsJur1\u002BsdkMnnL9/03hmFwCfu7A\u002BzvDvJpOuJ8LvYur2OnmkScAolEAqlUCvF4HIvFAqPRSDJN84zruvcBnAUAKdilRB1sKANsFWTEVgSEEIEESilyuRxUVYWiKJJlWel2uy0DwEowlM9m8l/dzze2NvWELIdtAEAkEoGmadB1HZVKBf1\u002Bn9m2/bzX67EwgeM4cBwHnB\u002B9XJCgWCxCVVVQSkMtNPhX/hv8YUApBSEEjDHYtn1sMcbAOQ8vIQcGiqJMJUk66HQ6WUJI0D6CEAKTyaSvKMryF5Y0m03Zdd2M53l/XSsajXJN08atVov/An2EwKjyg7dMAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-07-09T23:00:48.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\MainPage.xaml",
+              "RelativeDocumentMoniker": "HyVo_Lab2\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\HyVo_Lab2\\HyVo_Lab2\\HyVo_Lab2\\MainPage.xaml",
+              "RelativeToolTip": "HyVo_Lab2\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-09T23:00:48.796Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
