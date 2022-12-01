@@ -1,0 +1,8 @@
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\bin\Debug\SortAlgorithms.exe.config
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\bin\Debug\SortAlgorithms.exe
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\bin\Debug\SortAlgorithms.pdb
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\obj\Debug\SortAlgorithms.csproj.AssemblyReference.cache
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\obj\Debug\SortAlgorithms.csproj.SuggestedBindingRedirects.cache
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\obj\Debug\SortAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\obj\Debug\SortAlgorithms.exe
+C:\Users\mvanderlely\Downloads\SortAlgorithms\SortAlgorithms\obj\Debug\SortAlgorithms.pdb
