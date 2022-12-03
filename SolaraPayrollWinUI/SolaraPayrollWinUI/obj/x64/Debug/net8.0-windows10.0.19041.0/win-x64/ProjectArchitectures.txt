@@ -1,0 +1,1 @@
+C:\Users\Hy\Desktop\SolaraPayrollWinUI\SolaraPayrollWinUI\SolaraPayrollWinUI.csproj;x64

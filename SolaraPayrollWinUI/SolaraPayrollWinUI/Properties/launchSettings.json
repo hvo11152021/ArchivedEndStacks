@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SolaraPayrollWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SolaraPayrollWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

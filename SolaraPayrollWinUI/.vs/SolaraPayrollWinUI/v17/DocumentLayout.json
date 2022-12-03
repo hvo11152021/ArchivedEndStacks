@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hy\\Desktop\\SolaraPayrollWinUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E328D8F3-E974-4B0F-94E0-96ED470F8120}|SolaraPayrollWinUI\\SolaraPayrollWinUI.csproj|c:\\users\\hy\\desktop\\solarapayrollwinui\\solarapayrollwinui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E328D8F3-E974-4B0F-94E0-96ED470F8120}|SolaraPayrollWinUI\\SolaraPayrollWinUI.csproj|solutionrelative:solarapayrollwinui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E328D8F3-E974-4B0F-94E0-96ED470F8120}|SolaraPayrollWinUI\\SolaraPayrollWinUI.csproj|c:\\users\\hy\\desktop\\solarapayrollwinui\\solarapayrollwinui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E328D8F3-E974-4B0F-94E0-96ED470F8120}|SolaraPayrollWinUI\\SolaraPayrollWinUI.csproj|solutionrelative:solarapayrollwinui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\SolaraPayrollWinUI\\SolaraPayrollWinUI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SolaraPayrollWinUI\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\SolaraPayrollWinUI\\SolaraPayrollWinUI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SolaraPayrollWinUI\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADUDAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T17:14:57.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Hy\\Desktop\\SolaraPayrollWinUI\\SolaraPayrollWinUI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SolaraPayrollWinUI\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Hy\\Desktop\\SolaraPayrollWinUI\\SolaraPayrollWinUI\\MainWindow.xaml",
+              "RelativeToolTip": "SolaraPayrollWinUI\\MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-11T16:30:54.858Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

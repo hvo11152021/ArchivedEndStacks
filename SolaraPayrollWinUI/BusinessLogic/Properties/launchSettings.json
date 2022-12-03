@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BusinessLogic (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "BusinessLogic (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
