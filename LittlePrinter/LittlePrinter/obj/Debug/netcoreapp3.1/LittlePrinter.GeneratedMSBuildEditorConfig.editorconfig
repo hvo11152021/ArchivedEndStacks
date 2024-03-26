@@ -3,3 +3,6 @@ build_property.RootNamespace = LittlePrinter
 build_property.ProjectDir = C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\LittlePrinter\LittlePrinter\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
