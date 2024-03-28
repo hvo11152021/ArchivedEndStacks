@@ -18,4 +18,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
   </ItemGroup>
 
+	<Target Name="BuildCss" BeforeTargets="Compile">
+		<Exec Command="npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/output.css --watch" />
+	</Target>
+
 </Project>
