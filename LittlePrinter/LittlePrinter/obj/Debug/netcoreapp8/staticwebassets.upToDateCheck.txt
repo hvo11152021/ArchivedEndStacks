@@ -1,5 +1,4 @@
-wwwroot\css\output.css
-wwwroot\css\site.css
+wwwroot\output.css
 wwwroot\favicon.ico
 wwwroot\img\applying_label_to_shipping_box.webp
 wwwroot\img\main_logo.png
@@ -38,4 +37,5 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\output.css
+wwwroot\css\site.css
+wwwroot\css\output.css
