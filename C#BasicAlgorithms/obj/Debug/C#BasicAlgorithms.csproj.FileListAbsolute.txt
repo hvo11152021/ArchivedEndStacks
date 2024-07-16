@@ -1,0 +1,7 @@
+C:\Users\Hy\Desktop\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.exe.config
+C:\Users\Hy\Desktop\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.exe
+C:\Users\Hy\Desktop\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.pdb
+C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.AssemblyReference.cache
+C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.exe
+C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.pdb
