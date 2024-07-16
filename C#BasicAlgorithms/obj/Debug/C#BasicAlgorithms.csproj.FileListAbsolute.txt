@@ -5,3 +5,11 @@ C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.Assembl
 C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.CoreCompileInputs.cache
 C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.exe
 C:\Users\Hy\Desktop\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.pdb
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.exe.config
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.exe
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\bin\Debug\C#BasicAlgorithms.pdb
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.AssemblyReference.cache
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.exe.config
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.csproj.CoreCompileInputs.cache
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.exe
+C:\Users\Hy\Documents\GitHub\ArchivedEndStacks\C#BasicAlgorithms\obj\Debug\C#BasicAlgorithms.pdb
