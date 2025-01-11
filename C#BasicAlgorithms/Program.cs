@@ -68,20 +68,33 @@ namespace C_BasicAlgorithms
         //    return false;
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(test("if else"));
+        //    Console.WriteLine(test("else"));
+        //    Console.ReadLine();
+        //}
+
+        //public static string test(string s)
+        //{
+        //    if (s.Length > 2 && s.Substring(0, 2).Equals("if"))
+        //    {
+        //        return s;
+        //    }
+        //    return "if " + s;
+        //}
+
         static void Main(string[] args)
         {
-            Console.WriteLine(test("if else"));
-            Console.WriteLine(test("else"));
+            Console.WriteLine(test("Python", 1));
+            Console.WriteLine(test("Python", 0));
+            Console.WriteLine(test("Python", 4));
             Console.ReadLine();
         }
 
-        public static string test(string s)
+        public static string test(string str, int n)
         {
-            if (s.Length > 2 && s.Substring(0, 2).Equals("if"))
-            {
-                return s;
-            }
-            return "if " + s;
+            return str.Remove(n, 1);
         }
     }
 }
