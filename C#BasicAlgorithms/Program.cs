@@ -53,19 +53,35 @@ namespace C_BasicAlgorithms
         //    return x == 30 || y == 30 || (x + y == 30);
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(test(103));
+        //    Console.WriteLine(test(90));
+        //    Console.WriteLine(test(89));
+        //    Console.ReadLine();
+        //}
+
+        //public static bool test(int x)
+        //{
+        //    if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
+        //        return true;
+        //    return false;
+        //}
+
         static void Main(string[] args)
         {
-            Console.WriteLine(test(103));
-            Console.WriteLine(test(90));
-            Console.WriteLine(test(89));
+            Console.WriteLine(test("if else"));
+            Console.WriteLine(test("else"));
             Console.ReadLine();
         }
 
-        public static bool test(int x)
+        public static string test(string s)
         {
-            if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
-                return true;
-            return false;
+            if (s.Length > 2 && s.Substring(0, 2).Equals("if"))
+            {
+                return s;
+            }
+            return "if " + s;
         }
     }
 }
