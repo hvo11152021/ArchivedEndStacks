@@ -154,13 +154,14 @@
                 }
             </tbody>
         </table>
+        <form asp-action="DeleteAll" asp-controller="Tags">
+            <div class="d-none d-lg-block">
+                <button type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('This action will delete all records. Are you willing to proceed? ')">
+                    @*<i class="fa fa-trash-o"></i> *@Delete All
+                </button>
+            </div>
+        </form>
         <partial name="_PagingNavBar" />
     </form>
-    <form asp-action="DeleteAll" asp-controller="Tags">
-        <div class="d-none d-lg-block">
-            <button type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('This action will delete all records. Are you willing to proceed? ')">
-                @*<i class="fa fa-trash-o"></i> *@Delete All
-            </button>
-        </div>
-    </form>
-    </div>
+    
+</div>

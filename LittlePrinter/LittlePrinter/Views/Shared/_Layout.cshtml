@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="~/css/transition.css" />
     @* <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" /> *@
 </head>
-<body>
+<body class="d-flex flex-column h-100">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
             <div class="container">
@@ -32,17 +32,23 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted bg-dark">
+
+    <main class="flex-shrink-0">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </main>
+    
+
+    <footer class="footer mt-auto py-3 bg-dark">
         <div class="container text-white">
             Copyright &copy; @DateTime.Now.Year Hy Vo
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
